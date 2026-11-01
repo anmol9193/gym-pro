@@ -10,8 +10,10 @@
     "license": "proprietary",
     "require": {
         "php": "^8.3",
+        "laravel/fortify": "^1.41",
         "laravel/framework": "^13.0",
-        "laravel/tinker": "^3.0"
+        "laravel/tinker": "^3.0",
+        "spatie/laravel-permission": "^8.3"
     },
     "require-dev": {
         "fakerphp/faker": "^1.23",
@@ -36,16 +38,14 @@
     "scripts": {
         "setup": [
             "composer install",
-            "@php -r \"file_exists('.env') || copy('.env.example', '.env');\"",
-            "@php artisan key:generate",
-            "@php -r \"file_exists('database/database.sqlite') || touch('database/database.sqlite');\"",
-            "@php artisan migrate --force",
-            "npm install",
+            "@php scripts/prepare-local.php",
+            "@php artisan migrate --seed",
+            "npm ci",
             "npm run build"
         ],
         "dev": [
             "Composer\\Config::disableProcessTimeout",
-            "@php artisan serve --host=127.0.0.1 --port=8000"
+            "@php artisan serve --host=localhost --port=8000"
         ],
         "test": [
             "@php artisan config:clear --ansi",
@@ -63,7 +63,6 @@
         ],
         "post-create-project-cmd": [
             "@php artisan key:generate --ansi",
-            "@php -r \"file_exists('database/database.sqlite') || touch('database/database.sqlite');\"",
             "@php artisan migrate --graceful --ansi"
         ],
         "pre-package-uninstall": [

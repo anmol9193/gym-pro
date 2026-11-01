@@ -3,7 +3,7 @@ const assert=require('node:assert/strict');const fs=require('node:fs');const pat
 const root=path.resolve(__dirname,'..');
 const products=JSON.parse(fs.readFileSync(path.join(root,'resources/data/products.json'),'utf8'));
 const programs=JSON.parse(fs.readFileSync(path.join(root,'resources/data/programs.json'),'utf8'));
-const origin=process.env.PREVIEW_ORIGIN||'http://127.0.0.1:8000';
+const origin=process.env.PREVIEW_ORIGIN||'http://localhost:8000';
 (async()=>{
  const browser=await chromium.launch({executablePath:process.env.CHROME_PATH||'C:/Program Files/Google/Chrome/Application/chrome.exe',headless:true,args:['--enable-unsafe-swiftshader']});
  const context=await browser.newContext({viewport:{width:390,height:844},isMobile:true,hasTouch:true,reducedMotion:'reduce',colorScheme:'dark'});
@@ -18,7 +18,7 @@ const origin=process.env.PREVIEW_ORIGIN||'http://127.0.0.1:8000';
   await visit(route);assert.equal(await page.locator('h1').count(),1);
   const resources=await page.locator('img[src],script[src],link[rel="stylesheet"]').evaluateAll(es=>es.map(e=>e.src||e.href));
   for(const resource of resources){const url=new URL(resource);if(url.origin===origin)assert.ok(fs.existsSync(path.join(root,'public',decodeURIComponent(url.pathname.slice(1)))),`${route}: ${url.pathname}`)}
-  assert.equal(await page.locator('#nav-links>li:not(.mobile-join)>a').count(),5);
+  assert.equal(await page.locator('#nav-links>li:not(.mobile-join):not(.mobile-account)>a').count(),5);
   assert.equal(await page.locator('#nav-links a[aria-current="page"]').count(),route==='/contact'?0:1);
  }
  let layouts=0;

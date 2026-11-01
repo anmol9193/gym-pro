@@ -157,3 +157,7 @@
   .product-zoom-dialog>img{max-height:calc(100dvh - 65px)}
 }
 @media(prefers-reduced-motion:reduce){.product-filters{scroll-behavior:auto}}
+/* Account access stays available alongside the contact action. */
+.mobile-account{display:none}
+@media(max-width:1200px){.mobile-account{display:list-item}}
+@media(max-width:700px){.nav-account{display:none!important}}
