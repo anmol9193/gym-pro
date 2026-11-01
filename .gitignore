@@ -1,0 +1,25 @@
+# Local configuration and credentials
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.pfx
+
+# Optional local QA dependencies and caches
+node_modules/
+.qa/
+__pycache__/
+*.pyc
+.DS_Store
+Thumbs.db
+*.log
+
+# Browser-generated screenshots and reports; source checks/contracts are kept
+/design-review/*.png
+/design-review/*-evidence.json
+/design-review/evidence.json
+/design-review/*-test-results.json
+/design-review/mobile-audit-*.json
+/design-review/typography-check.json
+/design-review/original-header.html

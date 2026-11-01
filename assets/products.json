@@ -1,0 +1,488 @@
+[
+  {
+    "slug": "hex-dumbbell",
+    "name": "Hex Dumbbell",
+    "category": "strength",
+    "categoryLabel": "Strength",
+    "tagline": "ONE REP. THEN ANOTHER.",
+    "description": "A classic free-weight silhouette for your strength-training setup. Explore this graphite-and-lime dumbbell concept, then ask about the weights and options available.",
+    "short": "A familiar shape. A focused strength setup.",
+    "details": [
+      [
+        "Design",
+        "Hexagonal ends with a textured handle"
+      ],
+      [
+        "Shown here",
+        "Single dumbbell concept"
+      ],
+      [
+        "Colour concept",
+        "Graphite, silver and lime"
+      ],
+      [
+        "Confirm on enquiry",
+        "Weight options, dimensions and pricing"
+      ]
+    ],
+    "ask": "Tell us which weight range you have in mind and whether you want a single dumbbell or a pair.",
+    "related": [
+      "training-kettlebell",
+      "loop-resistance-bands",
+      "everyday-shaker"
+    ]
+  },
+  {
+    "slug": "training-kettlebell",
+    "name": "Training Kettlebell",
+    "category": "strength",
+    "categoryLabel": "Strength",
+    "tagline": "A DIFFERENT WAY TO MOVE.",
+    "description": "A compact kettlebell concept with a rounded body and an open handle. Take a closer look at the design and ask about the weight options for your training space.",
+    "short": "A compact addition to your training corner.",
+    "details": [
+      [
+        "Design",
+        "Rounded body and open-loop handle"
+      ],
+      [
+        "Shown here",
+        "Single kettlebell concept"
+      ],
+      [
+        "Colour concept",
+        "Graphite with a lime handle accent"
+      ],
+      [
+        "Confirm on enquiry",
+        "Weight options, dimensions and pricing"
+      ]
+    ],
+    "ask": "Mention the weight you are looking for and how you plan to use it in your training setup.",
+    "related": [
+      "hex-dumbbell",
+      "studio-yoga-mat",
+      "training-duffel"
+    ]
+  },
+  {
+    "slug": "loop-resistance-bands",
+    "name": "Loop Resistance Bands",
+    "category": "movement",
+    "categoryLabel": "Movement",
+    "tagline": "MAKE ROOM FOR MOVEMENT.",
+    "description": "Three loop-band concepts in a compact training set. Browse the different views, then ask about available sizes, resistance levels and materials before choosing your set.",
+    "short": "A small set for your movement toolkit.",
+    "details": [
+      [
+        "Design",
+        "Closed-loop band shapes"
+      ],
+      [
+        "Shown here",
+        "Three-band concept set"
+      ],
+      [
+        "Colour concept",
+        "Lime, grey and graphite"
+      ],
+      [
+        "Confirm on enquiry",
+        "Resistance levels, materials and sizes"
+      ]
+    ],
+    "ask": "Ask which resistance levels and loop sizes are available. The colours in this demo do not indicate a resistance rating.",
+    "related": [
+      "studio-yoga-mat",
+      "hex-dumbbell",
+      "everyday-shaker"
+    ]
+  },
+  {
+    "slug": "studio-yoga-mat",
+    "name": "Studio Yoga Mat",
+    "category": "movement",
+    "categoryLabel": "Movement",
+    "tagline": "YOUR SPACE TO RESET.",
+    "description": "A clean, understated mat concept for your movement space, finished with a lime edge. Inspect the rolled and open views, then ask about the size, thickness and surface options.",
+    "short": "A dedicated space for your next session.",
+    "details": [
+      [
+        "Design",
+        "Flat training mat with a rolled edge"
+      ],
+      [
+        "Shown here",
+        "Single mat concept"
+      ],
+      [
+        "Colour concept",
+        "Graphite surface with a lime underside"
+      ],
+      [
+        "Confirm on enquiry",
+        "Size, thickness, material and care"
+      ]
+    ],
+    "ask": "Mention your preferred mat size and thickness, and ask about the surface and care instructions.",
+    "related": [
+      "loop-resistance-bands",
+      "training-kettlebell",
+      "training-duffel"
+    ]
+  },
+  {
+    "slug": "everyday-shaker",
+    "name": "Everyday Shaker",
+    "category": "essentials",
+    "categoryLabel": "Essentials",
+    "tagline": "PART OF YOUR DAILY KIT.",
+    "description": "A shaker bottle concept with a bold lime lid and a simple carry loop. Explore the shape and finish, then check the capacity, closure and cleaning details on enquiry.",
+    "short": "A bold little addition to your gym kit.",
+    "details": [
+      [
+        "Design",
+        "Tapered bottle, flip-top lid and carry loop"
+      ],
+      [
+        "Shown here",
+        "Single shaker concept"
+      ],
+      [
+        "Colour concept",
+        "Graphite bottle with a lime lid"
+      ],
+      [
+        "Confirm on enquiry",
+        "Capacity, material and cleaning details"
+      ]
+    ],
+    "ask": "Ask about the bottle capacity, lid closure, included accessories and cleaning guidance.",
+    "related": [
+      "training-duffel",
+      "hex-dumbbell",
+      "loop-resistance-bands"
+    ]
+  },
+  {
+    "slug": "training-duffel",
+    "name": "Training Duffel",
+    "category": "essentials",
+    "categoryLabel": "Essentials",
+    "tagline": "PACK FOR YOUR NEXT CHAPTER.",
+    "description": "A rounded gym-bag concept with carry handles and a lime zip accent. See it from every side and ask about capacity, compartments and carry options for your daily routine.",
+    "short": "Bring your training-day essentials together.",
+    "details": [
+      [
+        "Design",
+        "Rounded duffel with twin carry handles"
+      ],
+      [
+        "Shown here",
+        "Single gym-bag concept"
+      ],
+      [
+        "Colour concept",
+        "Graphite with lime detailing"
+      ],
+      [
+        "Confirm on enquiry",
+        "Capacity, compartments and carry options"
+      ]
+    ],
+    "ask": "Tell us what you usually carry and ask about bag dimensions, compartments and any included shoulder strap.",
+    "related": [
+      "everyday-shaker",
+      "studio-yoga-mat",
+      "training-kettlebell"
+    ]
+  },
+  {
+    "slug": "whey-protein",
+    "name": "Whey Protein",
+    "category": "supplements",
+    "categoryLabel": "Supplements",
+    "supplementType": "protein",
+    "typeLabel": "Protein",
+    "tagline": "WHEY / THE COLLECTION",
+    "description": "A whey protein packaging concept in our demo supplement collection. Explore the tub design and ask about available flavours, pack sizes and the actual product label.",
+    "short": "A classic protein tub for the demo collection.",
+    "details": [
+      [
+        "Type",
+        "Protein"
+      ],
+      [
+        "Shown here",
+        "Demo packaging concept"
+      ],
+      [
+        "Product information",
+        "Actual ingredients and label to be confirmed"
+      ],
+      [
+        "Confirm on enquiry",
+        "Flavours, pack size and the full ingredient label"
+      ]
+    ],
+    "ask": "Ask about available flavours, protein content on the actual label, milk allergens and pack sizes.",
+    "related": [
+      "whey-isolate",
+      "plant-protein",
+      "everyday-shaker"
+    ],
+    "demoNote": "Demo packaging concept. Actual ingredients, allergens, pack size and pricing are to be confirmed."
+  },
+  {
+    "slug": "whey-isolate",
+    "name": "Whey Isolate",
+    "category": "supplements",
+    "categoryLabel": "Supplements",
+    "supplementType": "protein",
+    "typeLabel": "Protein",
+    "tagline": "ISOLATE / THE COLLECTION",
+    "description": "A whey isolate concept with a silver-and-blue label. Browse the packaging views and enquire about the actual formulation, flavour choices and available pack sizes.",
+    "short": "A distinct isolate concept in silver and blue.",
+    "details": [
+      [
+        "Type",
+        "Protein"
+      ],
+      [
+        "Shown here",
+        "Demo packaging concept"
+      ],
+      [
+        "Product information",
+        "Actual ingredients and label to be confirmed"
+      ],
+      [
+        "Confirm on enquiry",
+        "Full formulation, allergens and pack options"
+      ]
+    ],
+    "ask": "Ask for the ingredient list, allergen information and nutrition panel of the actual product.",
+    "related": [
+      "whey-protein",
+      "plant-protein",
+      "creatine-monohydrate"
+    ],
+    "demoNote": "Demo packaging concept. Actual ingredients, allergens, pack size and pricing are to be confirmed."
+  },
+  {
+    "slug": "plant-protein",
+    "name": "Plant Protein",
+    "category": "supplements",
+    "categoryLabel": "Supplements",
+    "supplementType": "protein",
+    "typeLabel": "Protein",
+    "tagline": "PLANT / THE COLLECTION",
+    "description": "A plant protein packaging concept with a warm cream-and-green finish. Enquire about the protein sources, available flavours and actual ingredient label.",
+    "short": "A plant protein concept with a fresh finish.",
+    "details": [
+      [
+        "Type",
+        "Protein"
+      ],
+      [
+        "Shown here",
+        "Demo packaging concept"
+      ],
+      [
+        "Product information",
+        "Actual ingredients and label to be confirmed"
+      ],
+      [
+        "Confirm on enquiry",
+        "Protein sources, ingredients and flavour options"
+      ]
+    ],
+    "ask": "Ask which plant sources are used, which allergens are listed and what flavours and sizes are available.",
+    "related": [
+      "whey-protein",
+      "studio-yoga-mat",
+      "everyday-shaker"
+    ],
+    "demoNote": "Demo packaging concept. Actual ingredients, allergens, pack size and pricing are to be confirmed."
+  },
+  {
+    "slug": "creatine-monohydrate",
+    "name": "Creatine Monohydrate",
+    "category": "supplements",
+    "categoryLabel": "Supplements",
+    "supplementType": "creatine",
+    "typeLabel": "Creatine",
+    "tagline": "CREATINE / THE COLLECTION",
+    "description": "A compact creatine monohydrate tub concept in graphite and violet. Inspect the packaging and ask for the actual ingredient label, pack size and product details.",
+    "short": "A compact tub with a bold violet accent.",
+    "details": [
+      [
+        "Type",
+        "Creatine"
+      ],
+      [
+        "Shown here",
+        "Demo packaging concept"
+      ],
+      [
+        "Product information",
+        "Actual ingredients and label to be confirmed"
+      ],
+      [
+        "Confirm on enquiry",
+        "Ingredient label, pack size and product details"
+      ]
+    ],
+    "ask": "Ask for the full ingredient label, pack size, manufacturer details and pricing.",
+    "related": [
+      "whey-isolate",
+      "pre-workout",
+      "everyday-shaker"
+    ],
+    "demoNote": "Demo packaging concept. Actual ingredients, allergens, pack size and pricing are to be confirmed."
+  },
+  {
+    "slug": "pre-workout",
+    "name": "Pre-Workout",
+    "category": "supplements",
+    "categoryLabel": "Supplements",
+    "supplementType": "pre-workout",
+    "typeLabel": "Pre-workout",
+    "tagline": "PRE-WORKOUT / THE COLLECTION",
+    "description": "A pre-workout packaging concept with an electric orange label. Explore the design and enquire about flavours, the full formulation and any caffeine content on the actual label.",
+    "short": "An electric orange pre-workout concept.",
+    "details": [
+      [
+        "Type",
+        "Pre-workout"
+      ],
+      [
+        "Shown here",
+        "Demo packaging concept"
+      ],
+      [
+        "Product information",
+        "Actual ingredients and label to be confirmed"
+      ],
+      [
+        "Confirm on enquiry",
+        "Full formulation, caffeine label and flavours"
+      ]
+    ],
+    "ask": "Ask for the full ingredient list, caffeine content if present, allergen label and available flavours.",
+    "related": [
+      "creatine-monohydrate",
+      "whey-protein",
+      "everyday-shaker"
+    ],
+    "demoNote": "Demo packaging concept. Actual ingredients, allergens, pack size and pricing are to be confirmed."
+  },
+  {
+    "slug": "mass-gainer",
+    "name": "Mass Gainer",
+    "category": "supplements",
+    "categoryLabel": "Supplements",
+    "supplementType": "mass-gainer",
+    "typeLabel": "Mass gainer",
+    "tagline": "GAINER / THE COLLECTION",
+    "description": "A large-format mass gainer tub concept with a bold crimson label. Browse its views and ask about available pack sizes, flavours and the actual nutrition panel.",
+    "short": "A large-format concept with a crimson finish.",
+    "details": [
+      [
+        "Type",
+        "Mass gainer"
+      ],
+      [
+        "Shown here",
+        "Demo packaging concept"
+      ],
+      [
+        "Product information",
+        "Actual ingredients and label to be confirmed"
+      ],
+      [
+        "Confirm on enquiry",
+        "Nutrition panel, ingredients and pack sizes"
+      ]
+    ],
+    "ask": "Ask for the actual nutrition panel, full ingredients, allergens, flavour choices and pack sizes.",
+    "related": [
+      "whey-protein",
+      "training-duffel",
+      "everyday-shaker"
+    ],
+    "demoNote": "Demo packaging concept. Actual ingredients, allergens, pack size and pricing are to be confirmed."
+  },
+  {
+    "slug": "daily-multivitamin",
+    "name": "Daily Multivitamin",
+    "category": "supplements",
+    "categoryLabel": "Supplements",
+    "supplementType": "daily-essentials",
+    "typeLabel": "Daily essentials",
+    "tagline": "MULTIVITAMIN / THE COLLECTION",
+    "description": "A multivitamin bottle concept with a clean amber accent. Explore the packaging and enquire about the actual vitamin and mineral list, product format and pack details.",
+    "short": "A compact bottle concept with an amber accent.",
+    "details": [
+      [
+        "Type",
+        "Daily essentials"
+      ],
+      [
+        "Shown here",
+        "Demo packaging concept"
+      ],
+      [
+        "Product information",
+        "Actual ingredients and label to be confirmed"
+      ],
+      [
+        "Confirm on enquiry",
+        "Vitamin and mineral label, format and pack details"
+      ]
+    ],
+    "ask": "Ask for the actual vitamin and mineral list, ingredient label, product format and pack details.",
+    "related": [
+      "omega-3",
+      "plant-protein",
+      "training-duffel"
+    ],
+    "demoNote": "Demo packaging concept. Actual ingredients, allergens, pack size and pricing are to be confirmed."
+  },
+  {
+    "slug": "omega-3",
+    "name": "Omega-3",
+    "category": "supplements",
+    "categoryLabel": "Supplements",
+    "supplementType": "daily-essentials",
+    "typeLabel": "Daily essentials",
+    "tagline": "OMEGA-3 / THE COLLECTION",
+    "description": "An omega-3 bottle concept with a teal label. Take a closer look and enquire about the actual source, ingredient label, product format and available packs.",
+    "short": "A teal-accented bottle for the demo collection.",
+    "details": [
+      [
+        "Type",
+        "Daily essentials"
+      ],
+      [
+        "Shown here",
+        "Demo packaging concept"
+      ],
+      [
+        "Product information",
+        "Actual ingredients and label to be confirmed"
+      ],
+      [
+        "Confirm on enquiry",
+        "Source, full ingredient label and pack details"
+      ]
+    ],
+    "ask": "Ask about the actual source, allergen information, ingredient label, product format and pack size.",
+    "related": [
+      "daily-multivitamin",
+      "plant-protein",
+      "everyday-shaker"
+    ],
+    "demoNote": "Demo packaging concept. Actual ingredients, allergens, pack size and pricing are to be confirmed."
+  }
+]

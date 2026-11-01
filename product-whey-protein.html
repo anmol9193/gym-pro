@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#101211">
+  <meta name="description" content="A whey protein packaging concept in our demo supplement collection. Explore the tub design and ask about available flavours, pack sizes and the actual product label.">
+  <title>Whey Protein | BEAST MODE Gym</title>
+  <script>
+    try { document.documentElement.dataset.theme = localStorage.getItem('beast-theme') || (matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark'); } catch (_) {}
+    (() => {
+      const root = document.documentElement;
+      root.classList.add('is-loading');
+      const state = window.beastPageLoader = { startedAt: performance.now(), finished: false };
+      let timeout;
+      state.finish = () => {
+        if (state.finished) return;
+        state.finished = true;
+        clearTimeout(timeout);
+        root.classList.remove('is-loading');
+        root.classList.add('is-loaded');
+        document.getElementById('page-loader')?.setAttribute('aria-hidden', 'true');
+      };
+      // Always release the page, even if a script or asset cannot load.
+      timeout = setTimeout(state.finish, 4000);
+      ['pointerdown', 'keydown', 'wheel', 'touchstart'].forEach(event => {
+        addEventListener(event, state.finish, { once: true, passive: true });
+      });
+    })();
+  </script>
+  <link rel="stylesheet" href="assets/fonts/fonts.css">
+  <link rel="stylesheet" href="assets/styles.css">
+  <link rel="stylesheet" href="assets/typography.css">
+  <link rel="stylesheet" href="assets/loader.css">
+  <link rel="stylesheet" href="assets/products.css">
+  <link rel="stylesheet" href="assets/responsive.css">
+  <script src="assets/app.js" defer></script>
+  <script src="assets/products.js" defer></script>
+</head>
+<body class="product-detail-page">
+<div class="page-loader" id="page-loader" role="status" aria-live="polite" aria-label="Loading Beast Mode" hidden>
+  <div class="loader-content">
+    <div class="loader-orbit" aria-hidden="true"><span class="loader-emblem"><svg viewBox="0 0 32 32"><path d="m19 2-14 17h10l-2 11L28 12H18l1-10Z" fill="currentColor"/></svg></span></div>
+    <div class="loader-wordmark" aria-hidden="true">BEAST<span>MODE</span></div>
+    <p class="loader-caption">WARMING UP YOUR NEXT CHAPTER.</p>
+    <div class="loader-track" aria-hidden="true"><span></span></div>
+    <span class="loader-note" aria-hidden="true">SHOW UP. LEVEL UP.</span>
+  </div>
+</div>
+<script>if (document.documentElement.classList.contains('is-loading')) document.getElementById('page-loader').hidden = false;</script>
+<a class="skip-link" href="#main">Skip to content</a>
+<svg class="svg-defs" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  <defs>
+    <symbol id="icon-arrow" viewBox="0 0 24 24"><path d="M5 12h14m-6-6 6 6-6 6"/></symbol>
+    <symbol id="icon-up-right" viewBox="0 0 24 24"><path d="M6 18 18 6M6 6h12v12"/></symbol>
+    <symbol id="icon-bolt" viewBox="0 0 32 32"><path d="m19 2-14 17h10l-2 11L28 12H18l1-10Z" fill="currentColor" stroke="none"/></symbol>
+    <symbol id="icon-check" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></symbol>
+    <symbol id="icon-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"/></symbol>
+    <symbol id="icon-moon" viewBox="0 0 24 24"><path d="M20.5 14.5A9 9 0 0 1 9.5 3.5a9 9 0 1 0 11 11Z"/></symbol>
+    <symbol id="icon-dumbbell" viewBox="0 0 24 24"><path d="m6.5 6.5 11 11M4 10l6-6M14 20l6-6M2 8l6-6M16 22l6-6"/></symbol>
+  </defs>
+</svg>
+<div class="scroll-progress" aria-hidden="true"></div>
+<nav class="navbar" aria-label="Main navigation">
+  <div class="nav-shell">
+    <a class="brand" href="index.html#home" aria-label="Beast Mode home"><span class="brand-mark"><svg class="icon" aria-hidden="true"><use href="#icon-bolt"/></svg></span><span>BEAST<span class="accent-text">MODE</span><small>YOUR POTENTIAL. UNLEASHED.</small></span></a>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html#home">Home</a></li>
+      <li><a href="programs.html">Programs</a></li>
+      <li><a href="products.html" aria-current="true">Products</a></li>
+      <li><a href="our-approach.html">Our approach</a></li>
+      <li><a href="membership.html">Membership</a></li>
+
+      <li class="mobile-join"><a class="button button-primary" href="contact.html#enquiry">Start free trial <svg class="icon" aria-hidden="true"><use href="#icon-up-right"/></svg></a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="icon-button theme-toggle" type="button" aria-label="Switch to light theme" title="Switch to light theme"><svg class="icon sun" aria-hidden="true"><use href="#icon-sun"/></svg><svg class="icon moon" aria-hidden="true"><use href="#icon-moon"/></svg></button>
+      <a class="button button-primary nav-trial" href="contact.html#enquiry">Contact <svg class="icon" aria-hidden="true"><use href="#icon-up-right"/></svg></a>
+      <button class="icon-button menu-toggle" id="menu-toggle" type="button" aria-label="Open menu" aria-controls="nav-links" aria-expanded="false"><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+<main id="main">
+  <section class="product-single section-container" id="top"><nav class="product-breadcrumbs" aria-label="Breadcrumb"><a href="index.html#home">Home</a><span aria-hidden="true">/</span><a href="products.html">Products</a><span aria-hidden="true">/</span><span aria-current="page">Whey Protein</span></nav>
+    <div class="product-single-grid"><div class="product-single-heading"><span class="eyebrow">Supplements / DEMO COLLECTION</span><h1>Whey Protein</h1><p class="product-tagline">WHEY / THE COLLECTION</p></div><div class="product-gallery" data-product-gallery><div class="product-gallery-stage"><span class="product-stage-label">BEAST MODE / DEMO OBJECT 07</span><a class="product-main-photo" href="assets/products/whey-protein-1.jpg" data-product-zoom aria-label="Enlarge Whey Protein image"><img class="hero-photo" data-product-main src="assets/products/whey-protein-1.jpg" width="1000" height="1000" alt="3D concept of Whey Protein, view 1 of 3" fetchpriority="high"><span class="product-zoom-hint">View larger <span aria-hidden="true">+</span></span></a></div><div class="product-thumbnails" aria-label="Product views"><button class="product-thumbnail" type="button" data-product-view="1" data-product-src="assets/products/whey-protein-1.jpg" data-product-alt="3D concept of Whey Protein, view 1 of 3" aria-label="Show Whey Protein, view 1 of 3" aria-pressed="true" disabled><img src="assets/products/whey-protein-1.jpg" width="1000" height="1000" alt=""><span>01</span></button><button class="product-thumbnail" type="button" data-product-view="2" data-product-src="assets/products/whey-protein-2.jpg" data-product-alt="3D concept of Whey Protein, view 2 of 3" aria-label="Show Whey Protein, view 2 of 3" aria-pressed="false" disabled><img src="assets/products/whey-protein-2.jpg" width="1000" height="1000" alt=""><span>02</span></button><button class="product-thumbnail" type="button" data-product-view="3" data-product-src="assets/products/whey-protein-3.jpg" data-product-alt="3D concept of Whey Protein, view 3 of 3" aria-label="Show Whey Protein, view 3 of 3" aria-pressed="false" disabled><img src="assets/products/whey-protein-3.jpg" width="1000" height="1000" alt=""><span>03</span></button></div><p class="product-gallery-note" data-product-view-status role="status" aria-live="polite">View 1 of 3. Original 3D concept visual.</p><noscript><p class="notice">Other views: <a href="assets/products/whey-protein-2.jpg">View 2</a> / <a href="assets/products/whey-protein-3.jpg">View 3</a></p></noscript></div>
+    <div class="product-single-copy"><p class="product-description">A whey protein packaging concept in our demo supplement collection. Explore the tub design and ask about available flavours, pack sizes and the actual product label.</p><div class="product-enquiry-block"><strong>Price on enquiry</strong><p>Ask about current options and availability.</p><a class="button button-primary product-enquire" href="contact.html?product=whey-protein#enquiry">Enquire about this product <svg class="icon" aria-hidden="true"><use href="#icon-up-right"/></svg></a><small>Prepare a local enquiry draft. Nothing is sent automatically.</small></div><div class="product-demo-note"><span class="status-dot" aria-hidden="true"></span><p>Demo product with concept visuals. Demo packaging concept. Actual ingredients, allergens, pack size and pricing are to be confirmed.</p></div><a class="text-link" href="#product-details">Take a closer look <svg class="icon" aria-hidden="true"><use href="#icon-arrow"/></svg></a></div></div>
+  </section>
+  <section class="product-details section-container" id="product-details" aria-labelledby="product-details-heading"><div><span class="eyebrow">THE OBJECT / THE DETAILS</span><h2 id="product-details-heading">A CLOSER<br><span class="muted-heading">LOOK.</span></h2><dl class="product-specs"><div><dt>Type</dt><dd>Protein</dd></div><div><dt>Shown here</dt><dd>Demo packaging concept</dd></div><div><dt>Product information</dt><dd>Actual ingredients and label to be confirmed</dd></div><div><dt>Confirm on enquiry</dt><dd>Flavours, pack size and the full ingredient label</dd></div></dl></div><aside class="product-ask"><span class="eyebrow">BEFORE YOU CHOOSE</span><h3>Make it your setup.</h3><p>Ask about available flavours, protein content on the actual label, milk allergens and pack sizes.</p><a class="text-link product-enquire" href="contact.html?product=whey-protein#enquiry">Ask about Whey Protein <svg class="icon" aria-hidden="true"><use href="#icon-up-right"/></svg></a></aside></section>
+  <section class="product-related section-container" aria-labelledby="related-products-heading"><div class="section-heading"><div><span class="eyebrow">BUILD YOUR DAILY KIT</span><h2 id="related-products-heading">KEEP<br><span class="muted-heading">EXPLORING.</span></h2></div><a class="text-link" href="products.html">All products <svg class="icon" aria-hidden="true"><use href="#icon-up-right"/></svg></a></div><div class="product-grid"><article class="product-card" data-product-category="supplements" data-product-type="protein" data-product-name="whey isolate protein">
+      <a class="product-photo" href="product-whey-isolate.html" tabindex="-1" aria-hidden="true"><img src="assets/products/whey-isolate-1.jpg" width="1000" height="1000" alt="" loading="lazy"><span class="product-number" aria-hidden="true">BM / 08</span><span class="product-photo-arrow"><svg class="icon" aria-hidden="true"><use href="#icon-up-right"/></svg></span></a>
+      <div class="product-card-copy"><span class="eyebrow">Protein</span><h3><a href="product-whey-isolate.html">Whey Isolate</a></h3><p>A distinct isolate concept in silver and blue.</p><div class="product-card-bottom"><span>Price on enquiry</span><a href="product-whey-isolate.html" aria-label="View Whey Isolate">View product <svg class="icon" aria-hidden="true"><use href="#icon-up-right"/></svg></a></div></div>
+    </article><article class="product-card" data-product-category="supplements" data-product-type="protein" data-product-name="plant protein protein">
+      <a class="product-photo" href="product-plant-protein.html" tabindex="-1" aria-hidden="true"><img src="assets/products/plant-protein-1.jpg" width="1000" height="1000" alt="" loading="lazy"><span class="product-number" aria-hidden="true">BM / 09</span><span class="product-photo-arrow"><svg class="icon" aria-hidden="true"><use href="#icon-up-right"/></svg></span></a>
+      <div class="product-card-copy"><span class="eyebrow">Protein</span><h3><a href="product-plant-protein.html">Plant Protein</a></h3><p>A plant protein concept with a fresh finish.</p><div class="product-card-bottom"><span>Price on enquiry</span><a href="product-plant-protein.html" aria-label="View Plant Protein">View product <svg class="icon" aria-hidden="true"><use href="#icon-up-right"/></svg></a></div></div>
+    </article><article class="product-card" data-product-category="essentials" data-product-type="" data-product-name="everyday shaker ">
+      <a class="product-photo" href="product-everyday-shaker.html" tabindex="-1" aria-hidden="true"><img src="assets/products/everyday-shaker-1.jpg" width="1000" height="1000" alt="" loading="lazy"><span class="product-number" aria-hidden="true">BM / 05</span><span class="product-photo-arrow"><svg class="icon" aria-hidden="true"><use href="#icon-up-right"/></svg></span></a>
+      <div class="product-card-copy"><span class="eyebrow">Essentials</span><h3><a href="product-everyday-shaker.html">Everyday Shaker</a></h3><p>A bold little addition to your gym kit.</p><div class="product-card-bottom"><span>Price on enquiry</span><a href="product-everyday-shaker.html" aria-label="View Everyday Shaker">View product <svg class="icon" aria-hidden="true"><use href="#icon-up-right"/></svg></a></div></div>
+    </article></div></section>
+  <dialog class="product-zoom-dialog" data-product-dialog aria-label="Enlarged Whey Protein image"><button class="product-zoom-close" type="button" data-product-close aria-label="Close enlarged image">Close <span aria-hidden="true">&times;</span></button><img data-product-zoom-image src="assets/products/whey-protein-1.jpg" width="1000" height="1000" alt="Enlarged 3D concept of Whey Protein"><p data-product-zoom-caption>View 1 of 3</p></dialog>
+</main><footer class="footer section-container"><div class="footer-top"><a class="brand" href="index.html#home" aria-label="Beast Mode home"><span class="brand-mark"><svg class="icon" aria-hidden="true"><use href="#icon-bolt"/></svg></span><span>BEAST<span class="accent-text">MODE</span><small>YOUR POTENTIAL. UNLEASHED.</small></span></a><p>Show up. Put in the work.<br>Leave a little stronger.</p><a class="back-top" href="#top">BACK TO TOP <span>↑</span></a></div><div class="footer-wordmark" aria-hidden="true">BEAST MODE<span>®</span></div><div class="footer-bottom"><span>© 2026 BEAST MODE Gym</span><span>BODY. MIND. NO LIMITS.</span><span class="developer-credit">Designed &amp; Developed by <a href="https://anmolsaini.wuaze.com" target="_blank" rel="noopener noreferrer">Anmol Saini</a></span></div></footer>
+</body>
+</html>

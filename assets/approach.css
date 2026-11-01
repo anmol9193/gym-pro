@@ -1,0 +1,153 @@
+/* Our Approach — purpose, process and the people behind the gym. */
+.approach-page .nav-links a[aria-current="page"]{color:var(--ink)}
+.approach-page .nav-links a[aria-current="page"]::before{content:'';width:5px;height:5px;background:var(--accent-text);border-radius:50%;margin-right:8px;flex-shrink:0}
+.approach-hero{display:grid;grid-template-columns:1.05fr 1fr;gap:70px;align-items:center;padding-top:155px;padding-bottom:75px}
+.approach-hero-copy{min-width:0}
+.approach-hero .breadcrumbs{display:flex;align-items:center;gap:12px;margin-bottom:34px;font-size:12px;color:var(--muted)}
+.approach-hero .breadcrumbs a:hover{color:var(--accent-text)}
+.approach-hero .breadcrumbs>span:last-child{color:var(--ink)}
+.approach-hero-copy>.eyebrow{color:var(--muted);font-size:11px;letter-spacing:1.1px;margin-bottom:22px}
+.approach-hero-copy>.eyebrow .status-dot{color:var(--accent-text)}
+.approach-hero h1{font-size:clamp(43px,5vw,72px);line-height:1.08;letter-spacing:-.06em}
+.approach-hero-copy>p{font-size:17px;line-height:1.9;color:var(--muted);margin-top:26px;max-width:510px;text-wrap:pretty}
+.approach-hero-actions{display:flex;flex-wrap:wrap;align-items:center;gap:14px 23px;margin-top:28px}
+.approach-hero-actions .button,.approach-hero-actions .text-link{font-size:14px}
+.approach-hero-footnote{display:flex;align-items:center;gap:10px;font-size:10px;letter-spacing:.7px;color:var(--muted);margin-top:29px}
+.approach-hero-footnote .status-dot{color:var(--accent-text)}
+.approach-hero-visual{position:relative;isolation:isolate;height:485px;border:1px solid var(--line);border-radius:13px 70px 13px 13px;overflow:hidden;background:var(--surface);transform:perspective(1000px) rotateX(var(--tilt-x,0deg)) rotateY(var(--tilt-y,0deg));transition:transform .35s var(--ease)}
+.approach-hero-visual>.hero-photo{width:100%;height:100%;object-fit:cover;object-position:60% center;filter:saturate(.6)}
+.approach-hero-visual::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,#14201070,transparent 40%,#101a0be6);z-index:1;pointer-events:none}
+.approach-photo-label{position:absolute;top:26px;left:26px;right:28px;color:#fff;font-size:9px;font-weight:500;letter-spacing:1.3px;z-index:2}
+.approach-photo-caption{position:absolute;left:28px;right:24px;bottom:29px;z-index:2;color:#fff}
+.approach-photo-caption span{display:block;font-size:10px;letter-spacing:1.2px;margin-bottom:8px}
+.approach-photo-caption strong{display:block;font-size:25px;line-height:1.25;font-weight:700;letter-spacing:-1px}
+.approach-photo-bolt{position:absolute;top:80px;left:26px;display:grid;place-items:center;width:47px;height:53px;border-radius:9px;background:#d2fa49;color:#18210b;transform:rotate(-8deg);z-index:2}
+.approach-photo-bolt>.icon{width:32px;height:32px}
+.approach-principles{padding-top:65px;border-top:1px solid var(--line)}
+.approach-principles .section-heading h2{font-size:clamp(33px,4vw,55px)}
+.principles-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:32px}
+.principle{display:flex;flex-direction:column;border-right:1px solid var(--line);padding-right:29px;min-width:0}
+.principle:last-child{border-right:0;padding-right:0}
+.principle-number{display:block;font-size:43px;line-height:1.2;font-weight:700;letter-spacing:-2px;color:var(--accent-text);margin-bottom:21px}
+.principle h3{font-size:21px;letter-spacing:-.6px;font-weight:600}
+.principle p{font-size:15px;line-height:1.9;color:var(--muted);margin-top:15px;flex:1;text-wrap:pretty}
+.principle-foot{display:block;margin-top:25px;font-size:9px;font-weight:600;letter-spacing:1px;color:var(--muted)}
+.approach-process{background:var(--surface)}
+.process-layout{display:grid;grid-template-columns:1fr 1.1fr;gap:100px;align-items:start}
+.process-intro{min-width:0}
+.process-intro>.eyebrow{font-size:11px;letter-spacing:1px;margin-bottom:23px}
+.process-intro h2{font-size:clamp(34px,3.8vw,54px);line-height:1.15}
+.process-intro>p{font-size:16px;line-height:1.9;color:var(--muted);margin-top:23px;max-width:400px}
+.process-intro>.text-link{margin-top:20px;font-size:14px}
+.process-steps{list-style:none;padding:0;margin:0}
+.process-steps>li{display:flex;gap:22px;position:relative;padding-bottom:31px;min-width:0}
+.process-steps>li:not(:last-child)::before{content:'';position:absolute;top:47px;bottom:0;left:21px;width:1px;background:var(--line)}
+.process-steps>li:last-child{padding-bottom:0}
+.process-number{display:grid;place-items:center;width:43px;height:43px;border:1px solid color-mix(in srgb,var(--accent-text) 45%,var(--line));border-radius:50%;background:var(--bg);color:var(--accent-text);font-size:13px;font-weight:600;flex-shrink:0}
+.process-steps h3{font-size:20px;letter-spacing:-.5px;padding-top:5px;line-height:1.5}
+.process-steps p{font-size:15px;line-height:1.9;color:var(--muted);margin-top:9px}
+.process-steps .text-link{font-size:13px;margin-top:7px}
+.approach-page .journey-section{padding-bottom:65px}
+.approach-page .owner-section{padding-top:45px;margin-bottom:80px;border-bottom:0}
+.approach-invite-shell{display:flex;justify-content:space-between;align-items:center;gap:45px;padding:55px 60px;border-radius:14px;background:var(--accent);color:var(--accent-ink)}
+.approach-invite-shell .eyebrow{font-size:10px;letter-spacing:.9px;margin-bottom:22px}
+.approach-invite-shell h2{font-size:clamp(39px,4.3vw,60px)}
+.approach-invite-shell p{font-size:15px;line-height:1.9;color:#455724;max-width:520px;margin-top:20px}
+.approach-invite-actions{display:flex;flex-direction:column;align-items:flex-start;gap:15px;flex-shrink:0}
+.approach-invite-actions .button,.approach-invite-actions .text-link{font-size:14px}
+.approach-page .faq-section{padding-top:90px}
+.approach-page .faq-heading .eyebrow{font-size:11px}
+.approach-page .faq-heading h2{font-size:clamp(32px,3.5vw,49px)}
+.approach-page .footer{padding-top:10px}
+.is-loaded .approach-hero-copy{animation:loader-reveal .6s var(--ease) both}
+.is-loaded .approach-hero-visual{animation:loader-reveal .75s var(--ease) .08s both}
+@media(max-width:1100px){
+  .approach-hero{gap:35px;padding-top:135px;padding-bottom:60px}
+  .approach-hero h1{font-size:clamp(35px,4.8vw,54px)}
+  .approach-hero-copy>p{font-size:16px}
+  .approach-hero-visual{height:450px;border-top-right-radius:55px}
+  .approach-hero-actions{gap:9px 15px}
+  .approach-hero-actions .button,.approach-hero-actions .text-link{font-size:13px}
+  .approach-hero-footnote{font-size:9px;letter-spacing:.2px}
+  .approach-photo-caption strong{font-size:22px}
+  .approach-photo-caption span{font-size:9px;letter-spacing:.5px}
+  .principles-grid{gap:24px}
+  .principle{padding-right:22px}
+  .principle h3{font-size:19px}
+  .principle p{font-size:14px}
+  .principle-foot{font-size:8px;letter-spacing:.5px}
+  .process-layout{gap:45px}
+  .process-intro>.eyebrow{font-size:10px}
+  .process-intro>p,.process-steps p{font-size:15px}
+  .process-steps>li{gap:17px}
+  .process-steps h3{font-size:18px}
+  .approach-invite-shell{padding:42px;gap:30px}
+  .approach-invite-actions .button,.approach-invite-actions .text-link{font-size:13px}
+}
+@media(max-width:700px){
+  .approach-hero{grid-template-columns:1fr;gap:34px;padding-top:115px;padding-bottom:50px}
+  .approach-hero .breadcrumbs{margin-bottom:27px}
+  .approach-hero-copy>.eyebrow{font-size:10px;letter-spacing:.6px;margin-bottom:21px}
+  .approach-hero h1{font-size:clamp(37px,9.5vw,58px)}
+  .approach-hero-copy>p{font-size:16px;margin-top:23px;max-width:100%}
+  .approach-hero-actions{gap:12px 18px;margin-top:24px}
+  .approach-hero-footnote{font-size:9px;margin-top:25px;letter-spacing:.15px}
+  .approach-hero-visual{height:365px;max-width:520px;width:100%;justify-self:center;border-top-right-radius:48px}
+  .approach-photo-label{font-size:8px;top:23px;left:22px}
+  .approach-photo-bolt{top:65px;left:22px;width:41px;height:47px}
+  .approach-photo-bolt>.icon{width:29px;height:29px}
+  .approach-photo-caption{left:23px;right:22px;bottom:26px}
+  .approach-photo-caption strong{font-size:22px}
+  .approach-photo-caption span{font-size:9px}
+  .approach-principles{padding-top:53px}
+  .approach-principles .section-heading h2{font-size:clamp(29px,7.6vw,44px)}
+  .principles-grid{grid-template-columns:1fr;gap:25px}
+  .principle{border-right:0;border-bottom:1px solid var(--line);padding:0 0 25px}
+  .principle:last-child{border-bottom:0;padding-bottom:0}
+  .principle-number{font-size:38px;margin-bottom:16px}
+  .principle h3{font-size:22px}
+  .principle p{font-size:16px;margin-top:12px}
+  .principle-foot{font-size:10px;margin-top:20px}
+  .process-layout{grid-template-columns:1fr;gap:35px}
+  .process-intro>.eyebrow{font-size:10px}
+  .process-intro h2{font-size:clamp(32px,8.5vw,46px)}
+  .process-intro>p{font-size:16px;margin-top:22px;max-width:100%}
+  .process-intro>.text-link{font-size:14px;margin-top:17px}
+  .process-steps>li{gap:17px;padding-bottom:29px}
+  .process-steps h3{font-size:19px}
+  .process-steps p{font-size:15px}
+  .process-number{width:39px;height:39px;font-size:12px}
+  .process-steps>li:not(:last-child)::before{left:19px;top:43px}
+  .process-steps .text-link{font-size:13px}
+  .approach-page .journey-section{padding-bottom:40px}
+  .approach-page .owner-section{padding-top:30px;margin-bottom:20px}
+  .approach-invite-shell{flex-direction:column;align-items:stretch;gap:28px;padding:33px 25px}
+  .approach-invite-shell .eyebrow{font-size:9px;letter-spacing:.5px;line-height:1.8}
+  .approach-invite-shell h2{font-size:clamp(34px,8.5vw,48px)}
+  .approach-invite-shell p{font-size:15px;margin-top:18px}
+  .approach-invite-actions{gap:10px;flex-shrink:1}
+  .approach-invite-actions .button{width:100%;justify-content:space-between;font-size:14px}
+  .approach-invite-actions .text-link{font-size:13px}
+  .approach-page .faq-section{padding-top:60px}
+  .approach-page .faq-heading .eyebrow{font-size:10px}
+  .approach-page .faq-heading h2{font-size:clamp(30px,7.6vw,42px)}
+  .approach-page .faq-heading h2 br{display:block}
+}
+@media(max-width:380px){
+  .approach-hero h1{font-size:32px}
+  .approach-hero-footnote{font-size:8px}
+  .approach-hero-visual{height:330px}
+  .approach-photo-caption strong{font-size:19px}
+  .approach-photo-caption span{font-size:8px}
+  .approach-principles .section-heading h2{font-size:26px}
+  .principle h3{font-size:20px}
+  .process-intro h2{font-size:29px}
+  .process-steps>li{gap:13px}
+  .process-steps h3{font-size:18px}
+  .approach-invite-shell{padding:29px 21px}
+  .approach-invite-shell h2{font-size:31px}
+}
+@media(prefers-reduced-motion:reduce){
+  .approach-hero-visual{transform:none!important}
+  .is-loaded .approach-hero-copy,.is-loaded .approach-hero-visual{animation:none!important}
+}

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#101211">
+  <meta name="description" content="Compare Basic, Pro and Elite monthly memberships at BEAST MODE Gym and find the support that fits your training goals.">
+  <title>Membership | BEAST MODE Gym</title>
+  <script>
+    try { document.documentElement.dataset.theme = localStorage.getItem('beast-theme') || (matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark'); } catch (_) {}
+    (() => {
+      const root = document.documentElement;
+      root.classList.add('is-loading');
+      const state = window.beastPageLoader = { startedAt: performance.now(), finished: false };
+      let timeout;
+      state.finish = () => {
+        if (state.finished) return;
+        state.finished = true;
+        clearTimeout(timeout);
+        root.classList.remove('is-loading');
+        root.classList.add('is-loaded');
+        document.getElementById('page-loader')?.setAttribute('aria-hidden', 'true');
+      };
+      // Always release the page, even if a script or asset cannot load.
+      timeout = setTimeout(state.finish, 4000);
+      ['pointerdown', 'keydown', 'wheel', 'touchstart'].forEach(event => {
+        addEventListener(event, state.finish, { once: true, passive: true });
+      });
+    })();
+  </script>
+  <link rel="stylesheet" href="assets/fonts/fonts.css">
+  <link rel="stylesheet" href="assets/styles.css">
+  <link rel="stylesheet" href="assets/typography.css">
+  <link rel="stylesheet" href="assets/loader.css">
+  <link rel="stylesheet" href="assets/pages.css">
+  <link rel="stylesheet" href="assets/responsive.css">
+  <script src="assets/app.js" defer></script>
+</head>
+<body class="membership-page">
+<div class="page-loader" id="page-loader" role="status" aria-live="polite" aria-label="Loading Beast Mode" hidden>
+  <div class="loader-content">
+    <div class="loader-orbit" aria-hidden="true"><span class="loader-emblem"><svg viewBox="0 0 32 32"><path d="m19 2-14 17h10l-2 11L28 12H18l1-10Z" fill="currentColor"/></svg></span></div>
+    <div class="loader-wordmark" aria-hidden="true">BEAST<span>MODE</span></div>
+    <p class="loader-caption">WARMING UP YOUR NEXT CHAPTER.</p>
+    <div class="loader-track" aria-hidden="true"><span></span></div>
+    <span class="loader-note" aria-hidden="true">SHOW UP. LEVEL UP.</span>
+  </div>
+</div>
+<script>if (document.documentElement.classList.contains('is-loading')) document.getElementById('page-loader').hidden = false;</script>
+<a class="skip-link" href="#main">Skip to content</a>
+<svg class="svg-defs" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  <defs>
+    <symbol id="icon-arrow" viewBox="0 0 24 24"><path d="M5 12h14m-6-6 6 6-6 6"/></symbol>
+    <symbol id="icon-up-right" viewBox="0 0 24 24"><path d="M6 18 18 6M6 6h12v12"/></symbol>
+    <symbol id="icon-bolt" viewBox="0 0 32 32"><path d="m19 2-14 17h10l-2 11L28 12H18l1-10Z" fill="currentColor" stroke="none"/></symbol>
+    <symbol id="icon-check" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></symbol>
+    <symbol id="icon-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"/></symbol>
+    <symbol id="icon-moon" viewBox="0 0 24 24"><path d="M20.5 14.5A9 9 0 0 1 9.5 3.5a9 9 0 1 0 11 11Z"/></symbol>
+    <symbol id="icon-dumbbell" viewBox="0 0 24 24"><path d="m6.5 6.5 11 11M4 10l6-6M14 20l6-6M2 8l6-6M16 22l6-6"/></symbol>
+  </defs>
+</svg>
+<div class="scroll-progress" aria-hidden="true"></div>
+<nav class="navbar" aria-label="Main navigation">
+  <div class="nav-shell">
+    <a class="brand" href="index.html#home" aria-label="Beast Mode home"><span class="brand-mark"><svg class="icon" aria-hidden="true"><use href="#icon-bolt"/></svg></span><span>BEAST<span class="accent-text">MODE</span><small>YOUR POTENTIAL. UNLEASHED.</small></span></a>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html#home">Home</a></li>
+      <li><a href="programs.html">Programs</a></li>
+      <li><a href="products.html">Products</a></li>
+      <li><a href="our-approach.html">Our approach</a></li>
+      <li><a href="membership.html" aria-current="page">Membership</a></li>
+
+      <li class="mobile-join"><a class="button button-primary" href="contact.html#enquiry">Start free trial <svg class="icon" aria-hidden="true"><use href="#icon-up-right"/></svg></a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="icon-button theme-toggle" type="button" aria-label="Switch to light theme" title="Switch to light theme"><svg class="icon sun" aria-hidden="true"><use href="#icon-sun"/></svg><svg class="icon moon" aria-hidden="true"><use href="#icon-moon"/></svg></button>
+      <a class="button button-primary nav-trial" href="contact.html#enquiry">Contact <svg class="icon" aria-hidden="true"><use href="#icon-up-right"/></svg></a>
+      <button class="icon-button menu-toggle" id="menu-toggle" type="button" aria-label="Open menu" aria-controls="nav-links" aria-expanded="false"><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+<main id="main">
+  <header class="membership-hero section-container" id="top"><nav class="page-breadcrumbs" aria-label="Breadcrumb"><a href="index.html#home">Home</a><span aria-hidden="true">/</span><span aria-current="page">Membership</span></nav><div class="membership-intro"><span class="eyebrow"><span class="status-dot"></span> MONTHLY MEMBERSHIPS. EVERYDAY COMMITMENT.</span><h1>MAKE ROOM.<br><span class="accent-text">FOR YOURSELF.</span></h1><p>Find the support that fits your goals. From your first session to a more personal training journey, choose your way forward.</p><div class="membership-hero-actions"><a class="button button-primary" href="#plans">Explore memberships <svg class="icon" aria-hidden="true"><use href="#icon-up-right"/></svg></a><a class="text-link" href="#compare">Compare the details <svg class="icon" aria-hidden="true"><use href="#icon-arrow"/></svg></a></div><ul class="membership-reassurance"><li>Monthly plans</li><li>All fitness levels</li><li>First week free</li></ul></div></header>
+  <section class="pricing-section section-pad section-container" id="plans"><div class="section-heading reveal"><div><span class="eyebrow">FIND THE RIGHT SUPPORT</span><h2>PICK YOUR PACE.<br><span class="muted-heading">MAKE IT YOURS.</span></h2></div><p>No one-size-fits-all.<br>Find the plan that moves you.</p></div><div class="pricing-grid">
+    <article class="price-card reveal" data-tilt><div class="plan-top"><span class="eyebrow">THE STARTING LINE</span><svg class="icon" aria-hidden="true"><use href="#icon-dumbbell"/></svg></div><h3>Basic</h3><p>Make showing up your new normal.</p><div class="price">₹999<span>/ month</span></div><a class="button button-outline plan-select" data-plan="Basic" href="contact.html?plan=Basic#enquiry">Choose Basic <svg class="icon" aria-hidden="true"><use href="#icon-up-right"/></svg></a><ul class="plan-features"><li>Gym floor access</li><li>Locker room access</li><li>2 group classes per month</li></ul><span class="plan-foot">A solid start. A stronger you.</span></article>
+    <article class="price-card featured reveal" data-tilt><span class="popular-tag">THE CROWD FAVOURITE <span aria-hidden="true">✳</span></span><div class="plan-top"><span class="eyebrow">TAKE IT UP A LEVEL</span><svg class="icon" aria-hidden="true"><use href="#icon-bolt"/></svg></div><h3>Pro</h3><p>More ways to move. More room to grow.</p><div class="price">₹1,999<span>/ month</span></div><a class="button button-dark plan-select" data-plan="Pro" href="contact.html?plan=Pro#enquiry">Go Pro <svg class="icon" aria-hidden="true"><use href="#icon-up-right"/></svg></a><ul class="plan-features"><li>Everything in Basic</li><li>Unlimited group classes</li><li>Personalised diet plan</li><li>Steam room access</li></ul><span class="plan-foot">All in on your next chapter.</span></article>
+    <article class="price-card reveal" data-tilt><div class="plan-top"><span class="eyebrow">YOUR NEXT PERSONAL BEST</span><svg class="icon" aria-hidden="true"><use href="#icon-up-right"/></svg></div><h3>Elite</h3><p>Personal support. Full commitment.</p><div class="price">₹3,499<span>/ month</span></div><a class="button button-outline plan-select" data-plan="Elite" href="contact.html?plan=Elite#enquiry">Choose Elite <svg class="icon" aria-hidden="true"><use href="#icon-up-right"/></svg></a><ul class="plan-features"><li>Everything in Pro</li><li>4 personal training sessions / month</li><li>Body composition analysis</li><li>Guest passes</li></ul><span class="plan-foot">Built around your ambition.</span></article>
+  </div></section>
+  <section class="comparison-section section-container section-pad" id="compare" aria-labelledby="compare-heading"><div class="section-heading reveal"><div><span class="eyebrow">A CLEARER LOOK AT YOUR OPTIONS</span><h2 id="compare-heading">THE DETAILS.<br><span class="muted-heading">SIDE BY SIDE.</span></h2></div><p>Choose the support you want.<br>Build from your starting point.</p></div><p class="comparison-hint">Swipe the table to compare all three plans.</p><div class="comparison-scroll reveal" role="region" aria-labelledby="compare-heading" tabindex="0"><table class="comparison-table"><caption>Monthly membership features at BEAST MODE Gym</caption><thead><tr><th scope="col">What is included</th><th scope="col">Basic<span>&#8377;999 / month</span></th><th scope="col" class="compare-pro">Pro<span>&#8377;1,999 / month</span></th><th scope="col">Elite<span>&#8377;3,499 / month</span></th></tr></thead><tbody><tr><th scope="row">Gym floor access</th><td>Included</td><td class="compare-pro">Included</td><td>Included</td></tr><tr><th scope="row">Locker room</th><td>Included</td><td class="compare-pro">Included</td><td>Included</td></tr><tr><th scope="row">Group classes</th><td>2 per month</td><td class="compare-pro">Unlimited</td><td>Unlimited</td></tr><tr><th scope="row">Personalised diet plan</th><td>Not included</td><td class="compare-pro">Included</td><td>Included</td></tr><tr><th scope="row">Steam room</th><td>Not included</td><td class="compare-pro">Included</td><td>Included</td></tr><tr><th scope="row">Personal training</th><td>Not included</td><td class="compare-pro">Not included</td><td>4 sessions / month</td></tr><tr><th scope="row">Body composition analysis</th><td>Not included</td><td class="compare-pro">Not included</td><td>Included</td></tr><tr><th scope="row">Guest passes</th><td>Not included</td><td class="compare-pro">Not included</td><td>Included</td></tr></tbody><tfoot><tr><th scope="row">Find your starting point</th><td><a class="text-link" href="contact.html?plan=Basic#enquiry">Choose Basic <svg class="icon" aria-hidden="true"><use href="#icon-up-right"/></svg></a></td><td class="compare-pro"><a class="text-link" href="contact.html?plan=Pro#enquiry">Choose Pro <svg class="icon" aria-hidden="true"><use href="#icon-up-right"/></svg></a></td><td><a class="text-link" href="contact.html?plan=Elite#enquiry">Choose Elite <svg class="icon" aria-hidden="true"><use href="#icon-up-right"/></svg></a></td></tr></tfoot></table></div></section>
+  <section class="membership-invite section-container"><div class="membership-invite-shell reveal"><span class="eyebrow">A STRONGER ROUTINE STARTS WITH ONE HELLO.</span><h2>TRY YOUR FIRST WEEK.<br><span class="muted-heading">FIND YOUR PEOPLE.</span></h2><p>Have a question about a plan? Let us help you find your starting point.</p><a class="button button-primary" href="contact.html#enquiry">Ask about membership <svg class="icon" aria-hidden="true"><use href="#icon-up-right"/></svg></a></div></section>
+  <section class="faq-section section-container section-pad"><div class="faq-heading reveal"><span class="eyebrow">GOOD QUESTIONS. CLEAR ANSWERS.</span><h2>BEFORE<br><span class="muted-heading">YOU CHOOSE.</span></h2><p>A little clarity for your next step.</p></div><div class="faq-list reveal"><details><summary>Which membership should I start with?<span aria-hidden="true">+</span></summary><p>Basic covers gym floor access and two group classes each month. Pro adds unlimited classes, a diet plan and steam room access. Elite includes everything in Pro plus personal training, body analysis and guest passes.</p></details><details><summary>Can I try the gym before choosing a plan?<span aria-hidden="true">+</span></summary><p>The website offers a first-week trial. Prepare an enquiry to discuss your visit and confirm trial inclusions and session availability with the gym.</p></details><details><summary>How many personal training sessions does Elite include?<span aria-hidden="true">+</span></summary><p>Elite includes four personal training sessions per month, alongside the features included in Pro.</p></details><details><summary>Does choosing a plan take a payment?<span aria-hidden="true">+</span></summary><p>No. Choosing a plan opens the Contact page with that membership selected. You can prepare an enquiry draft to discuss the plan; this website does not process payments.</p></details></div></section>
+</main>
+<footer class="footer section-container"><div class="footer-top"><a class="brand" href="index.html#home" aria-label="Beast Mode home"><span class="brand-mark"><svg class="icon" aria-hidden="true"><use href="#icon-bolt"/></svg></span><span>BEAST<span class="accent-text">MODE</span><small>YOUR POTENTIAL. UNLEASHED.</small></span></a><p>Show up. Put in the work.<br>Leave a little stronger.</p><a class="back-top" href="#top">BACK TO TOP <span>↑</span></a></div><div class="footer-wordmark" aria-hidden="true">BEAST MODE<span>®</span></div><div class="footer-bottom"><span>© 2026 BEAST MODE Gym</span><span>BODY. MIND. NO LIMITS.</span><span class="developer-credit">Designed &amp; Developed by <a href="https://anmolsaini.wuaze.com" target="_blank" rel="noopener noreferrer">Anmol Saini</a></span></div></footer>
+</body>
+</html>

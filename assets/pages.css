@@ -1,0 +1,207 @@
+/* Membership and Contact share the existing gym identity and local assets. */
+.page-breadcrumbs{display:flex;align-items:center;gap:12px;font-size:12px;color:var(--muted)}
+.page-breadcrumbs>span:last-child{color:var(--ink)}
+.page-breadcrumbs a:hover{color:var(--accent-text)}
+/* Membership */
+.membership-hero{padding-top:150px;padding-bottom:25px}
+.membership-intro{max-width:850px;text-align:center;margin:36px auto 0}
+.membership-intro>.eyebrow{color:var(--muted);font-size:11px;letter-spacing:1px;margin-bottom:22px}
+.membership-intro .status-dot{color:var(--accent-text)}
+.membership-intro h1{font-size:clamp(43px,5vw,72px);line-height:1.08;letter-spacing:-.06em}
+.membership-intro>p{max-width:640px;margin:24px auto 0;font-size:17px;line-height:1.9;color:var(--muted)}
+.membership-hero-actions{display:flex;justify-content:center;align-items:center;flex-wrap:wrap;gap:15px 24px;margin-top:28px}
+.membership-hero-actions .button,.membership-hero-actions .text-link{font-size:14px}
+.membership-reassurance{display:flex;justify-content:center;flex-wrap:wrap;gap:12px 23px;list-style:none;padding:0;margin:26px 0 0;color:var(--muted);font-size:12px}
+.membership-reassurance li::before{content:'\2713';margin-right:7px;color:var(--accent-text);font-weight:600}
+.membership-page .pricing-section{padding-top:70px;padding-bottom:20px}
+.membership-page .pricing-section h2{font-size:clamp(35px,4vw,54px)}
+.membership-page .pricing-grid{padding-top:25px}
+.membership-page .price-card{scroll-margin-top:12px}
+.membership-page .price-card .plan-select{gap:14px}
+.comparison-section .section-heading h2{font-size:clamp(35px,4vw,54px)}
+.comparison-scroll{width:100%;overflow-x:auto;border:1px solid var(--line);border-radius:12px;background:var(--bg);scrollbar-color:var(--accent-text) var(--surface)}
+.comparison-table{width:100%;min-width:640px;border-collapse:collapse;text-align:left;font-size:14px}
+.comparison-table caption{padding:18px 24px;text-align:left;font-size:12px;color:var(--muted);border-bottom:1px solid var(--line)}
+.comparison-table th,.comparison-table td{padding:18px 23px;border-bottom:1px solid var(--line);vertical-align:middle}
+.comparison-table thead th{font-size:19px;font-weight:600;line-height:1.6}
+.comparison-table thead th:first-child{font-size:13px;color:var(--muted);font-weight:500}
+.comparison-table thead th>span{display:block;font-size:12px;font-weight:400;color:var(--muted);margin-top:4px;white-space:nowrap}
+.comparison-table tbody th{font-weight:500;font-size:14px}
+.comparison-table tbody td{color:var(--muted);font-size:13px}
+.comparison-table .compare-pro{background:color-mix(in srgb,var(--accent-text) 7%,var(--bg))}
+.comparison-table tfoot th{font-size:12px;font-weight:500;color:var(--muted)}
+.comparison-table tfoot th,.comparison-table tfoot td{border-bottom:0}
+.comparison-table tfoot .text-link{font-size:12px;white-space:nowrap;gap:12px;color:var(--accent-text)}
+.comparison-table tfoot .icon{width:16px;height:16px}
+.comparison-hint{display:none;font-size:11px;color:var(--muted);margin-bottom:13px}
+.membership-invite-shell{padding:53px 60px;border:1px solid var(--line);border-radius:14px;background:var(--surface)}
+.membership-invite-shell .eyebrow{font-size:10px;letter-spacing:1px;margin-bottom:23px}
+.membership-invite-shell h2{font-size:clamp(35px,4vw,56px)}
+.membership-invite-shell p{font-size:16px;color:var(--muted);line-height:1.9;margin-top:22px;max-width:600px}
+.membership-invite-shell .button{font-size:14px;margin-top:25px}
+.membership-page .faq-heading h2{font-size:clamp(34px,3.8vw,54px)}
+.membership-page .faq-heading .eyebrow{font-size:10px}
+/* Contact */
+.contact-layout{display:grid;grid-template-columns:.95fr 1.15fr;gap:70px;align-items:start;padding-top:150px}
+.contact-intro{min-width:0}
+.contact-intro>.page-breadcrumbs{margin-bottom:34px}
+.contact-intro>.eyebrow{font-size:11px;color:var(--muted);letter-spacing:.9px;margin-bottom:23px}
+.contact-intro>.eyebrow .status-dot{color:var(--accent-text)}
+.contact-intro h1{font-size:clamp(38px,4.2vw,60px);line-height:1.12;letter-spacing:-.065em}
+.contact-intro>p{font-size:16px;line-height:1.9;color:var(--muted);margin-top:25px;max-width:430px}
+.contact-details{margin-top:32px}
+.contact-details h2{font-size:24px;line-height:1.4;letter-spacing:-.8px;font-weight:600}
+.contact-details-note{font-size:12px;color:var(--muted);margin-top:9px;line-height:1.8}
+.contact-details dl{margin:17px 0 0}
+.contact-details dl>div{position:relative;padding:17px 0 17px 58px;border-bottom:1px solid var(--line)}
+.contact-detail-icon{position:absolute;left:0;top:18px;display:grid;place-items:center;width:38px;height:38px;border:1px solid var(--line);border-radius:50%;color:var(--accent-text)}
+.contact-detail-icon .icon{width:19px;height:19px}
+.contact-details dt{font-size:12px;font-weight:600;color:var(--ink);line-height:1.8}
+.contact-details dd{font-size:14px;color:var(--muted);line-height:1.8;margin:3px 0 0}
+.contact-intro>.text-link{font-size:14px;margin-top:20px}
+.contact-panel{padding:33px;border:1px solid var(--line);border-radius:13px;background:var(--surface);scroll-margin-top:12px;min-width:0}
+.contact-panel>.eyebrow{font-size:10px;color:var(--accent-text);letter-spacing:1px;margin-bottom:16px}
+.contact-panel>h2{font-size:29px;line-height:1.3;letter-spacing:-1px;font-weight:600}
+.contact-panel>p{font-size:14px;color:var(--muted);line-height:1.9;margin-top:13px}
+.contact-panel form{margin-top:25px;gap:18px}
+.contact-panel .form-row,.contact-select-row{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.contact-panel label{font-size:12px;gap:8px;min-width:0}
+.field-label{display:flex;justify-content:space-between;gap:10px;align-items:baseline}
+.optional-label{font-size:10px;font-weight:400;color:var(--muted)}
+.contact-panel input,.contact-panel select,.contact-panel textarea{width:100%;min-width:0;max-width:100%;min-height:49px;padding:12px;border:1px solid var(--line);border-radius:6px;background:var(--bg);color:var(--ink);font:400 14px/1.5 var(--body);transition:border-color .2s,background-color .2s}
+.contact-panel textarea{height:auto;resize:vertical;min-height:115px;max-height:340px}
+.contact-panel input::placeholder,.contact-panel textarea::placeholder{color:var(--muted);font-size:12px;opacity:1}
+.contact-panel input:focus,.contact-panel select:focus,.contact-panel textarea:focus{outline:2px solid var(--accent-text);outline-offset:2px;border-color:var(--accent-text);background:var(--bg)}
+.contact-panel label>small{font-size:9px;color:var(--muted);font-weight:400}
+.contact-panel form .button-primary{background:var(--accent);color:var(--accent-ink);font-size:13px;min-height:53px;margin-top:0}
+.contact-panel form .button-primary:hover{background:#e0ff77}
+.contact-panel .form-note{font-size:11px;color:var(--muted);line-height:1.8;text-align:left;margin-top:-5px}
+.contact-panel .enquiry-result{background:var(--bg);border-color:var(--line);margin-top:24px;padding:23px;color:var(--ink)}
+.contact-panel .enquiry-result h3{font-size:23px;letter-spacing:-.7px}
+.contact-panel .enquiry-result p{font-size:14px;color:var(--muted);line-height:1.9}
+.contact-panel #enquiry-summary{white-space:pre-line;color:var(--ink);overflow-wrap:anywhere;user-select:text}
+.contact-result-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:22px}
+.contact-panel .enquiry-result .button{color:var(--ink);border-color:var(--line);font-size:12px;margin-top:0;padding:12px 16px;min-height:45px}
+.contact-panel .enquiry-result .button:hover{background:var(--ink);color:var(--bg)}
+.contact-panel #copy-status{font-size:12px;color:var(--accent-text)}
+.contact-panel #copy-status:empty{display:none}
+.visit-section{display:grid;grid-template-columns:1.05fr 1fr;gap:75px;align-items:center;padding-bottom:30px}
+.visit-photo{position:relative;isolation:isolate;height:370px;border-radius:13px;overflow:hidden;background:var(--surface);transform:perspective(1000px) rotateX(var(--tilt-x,0deg)) rotateY(var(--tilt-y,0deg));transition:transform .35s var(--ease)}
+.visit-photo img{width:100%;height:100%;object-fit:cover;filter:saturate(.5)}
+.visit-photo::after{content:'';position:absolute;inset:0;z-index:1;background:linear-gradient(transparent 25%,#0d190bd9)}
+.visit-photo>span{position:absolute;left:29px;right:25px;bottom:28px;z-index:2;font-size:34px;font-weight:800;letter-spacing:-1.5px;line-height:1.15;color:#fff}
+.visit-photo>span strong{color:#d2fa49}
+.visit-copy{min-width:0}
+.visit-copy>.eyebrow{font-size:11px;letter-spacing:1px;margin-bottom:21px}
+.visit-copy h2{font-size:clamp(30px,3.1vw,44px);line-height:1.2}
+.visit-copy>p{font-size:16px;line-height:1.9;margin-top:21px;color:var(--muted)}
+.visit-copy ul{list-style:none;padding:0;margin:20px 0 0}
+.visit-copy li{position:relative;padding-left:24px;font-size:14px;line-height:1.9;color:var(--muted);margin-bottom:11px}
+.visit-copy li::before{content:'\2713';position:absolute;left:0;color:var(--accent-text);font-weight:600}
+.visit-copy>.text-link{font-size:14px;margin-top:9px}
+.contact-page .faq-heading h2{font-size:clamp(32px,3.6vw,50px)}
+.contact-page .faq-heading .eyebrow{font-size:10px}
+.membership-page .footer,.contact-page .footer{padding-top:10px}
+.is-loaded .membership-intro,.is-loaded .contact-intro{animation:loader-reveal .6s var(--ease) both}
+@media(max-width:1200px){
+  .membership-hero{padding-top:130px}
+  .contact-layout{gap:38px;padding-top:130px;grid-template-columns:1fr 1.1fr}
+  .contact-intro h1{font-size:clamp(32px,4.1vw,49px)}
+  .contact-intro>.eyebrow{font-size:10px}
+  .contact-panel{padding:27px}
+  .contact-panel>h2{font-size:26px}
+  .contact-panel .form-row,.contact-select-row{grid-template-columns:1fr}
+  .visit-section{gap:45px}
+  .membership-page .price-card{padding-inline:23px}
+}
+@media(max-width:900px){
+  .contact-layout{grid-template-columns:1fr;gap:35px}
+  .contact-intro>p{max-width:600px}
+  .contact-details dl{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 28px}
+  .contact-panel{padding:32px}
+  .contact-panel .form-row,.contact-select-row{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .contact-panel label>small{font-size:10px}
+  .comparison-table th,.comparison-table td{padding:16px 20px}
+  .comparison-hint{display:block}
+  .membership-invite-shell{padding:43px}
+}
+@media(max-width:700px){
+  .membership-hero{padding-top:115px;padding-bottom:20px}
+  .membership-intro{margin-top:31px;text-align:left}
+  .membership-intro>.eyebrow{font-size:9px;letter-spacing:.55px;line-height:1.9;margin-bottom:21px}
+  .membership-intro h1{font-size:clamp(34px,8.8vw,55px);line-height:1.12}
+  .membership-intro>p{font-size:16px;margin-top:23px;line-height:1.9}
+  .membership-hero-actions{justify-content:flex-start;gap:13px 20px;margin-top:24px}
+  .membership-hero-actions .button,.membership-hero-actions .text-link{font-size:13px}
+  .membership-reassurance{justify-content:flex-start;gap:8px 17px;font-size:11px;margin-top:23px}
+  .membership-page .pricing-section{padding-top:43px;padding-bottom:0}
+  .membership-page .pricing-section h2{font-size:clamp(30px,8vw,46px)}
+  .membership-page .pricing-grid{padding-top:0}
+  .membership-page .price-card{padding-inline:27px}
+  .comparison-section .section-heading h2{font-size:clamp(32px,8vw,45px)}
+  .comparison-table{min-width:640px}
+  .comparison-table thead th{font-size:17px}
+  .comparison-table thead th:first-child,.comparison-table tbody th,.comparison-table tbody td{font-size:12px}
+  .comparison-table thead th>span{font-size:11px}
+  .comparison-table th,.comparison-table td{padding:16px 17px}
+  .comparison-table caption{font-size:11px;padding:16px 17px}
+  .comparison-table tfoot .text-link{font-size:11px;gap:8px}
+  .comparison-table tfoot th{font-size:11px}
+  .membership-invite-shell{padding:32px 25px}
+  .membership-invite-shell .eyebrow{font-size:9px;letter-spacing:.5px;line-height:1.8}
+  .membership-invite-shell h2{font-size:clamp(29px,7.7vw,43px)}
+  .membership-invite-shell p{font-size:15px}
+  .membership-invite-shell .button{font-size:13px}
+  .membership-page .faq-heading h2{font-size:clamp(33px,8vw,43px)}
+  .contact-layout{padding-top:115px;gap:30px}
+  .contact-intro>.page-breadcrumbs{margin-bottom:28px}
+  .contact-intro>.eyebrow{font-size:10px;letter-spacing:.4px;margin-bottom:21px}
+  .contact-intro h1{font-size:clamp(32px,8.4vw,51px)}
+  .contact-intro>p{font-size:16px;margin-top:23px}
+  .contact-details{margin-top:28px}
+  .contact-details h2{font-size:23px}
+  .contact-details-note{font-size:12px}
+  .contact-details dl{grid-template-columns:1fr;gap:0}
+  .contact-details dl>div{padding-block:16px}
+  .contact-details dd{font-size:14px}
+  .contact-panel{padding:28px 23px}
+  .contact-panel>h2{font-size:27px}
+  .contact-panel>p{font-size:14px}
+  .contact-panel label{font-size:13px}
+  .contact-panel input,.contact-panel select,.contact-panel textarea{font-size:16px;min-height:50px}
+  .contact-panel input::placeholder,.contact-panel textarea::placeholder{font-size:13px}
+  .contact-panel label>small{font-size:10px}
+  .contact-panel .form-row,.contact-select-row{grid-template-columns:1fr;gap:18px}
+  .contact-panel form .button-primary{font-size:13px;padding-inline:15px;gap:12px}
+  .contact-panel .enquiry-result{padding:21px}
+  .contact-panel .enquiry-result h3{font-size:22px}
+  .contact-panel .enquiry-result p{font-size:14px}
+  .contact-result-actions{gap:10px}
+  .contact-panel .enquiry-result .button{font-size:12px}
+  .visit-section{grid-template-columns:1fr;gap:30px;padding-bottom:0}
+  .visit-photo{height:310px}
+  .visit-photo>span{font-size:32px;left:25px;bottom:25px}
+  .visit-copy>.eyebrow{font-size:10px}
+  .visit-copy h2{font-size:clamp(29px,7.5vw,43px)}
+  .visit-copy>p{font-size:16px}
+  .visit-copy li{font-size:14px}
+  .contact-page .faq-heading h2{font-size:clamp(32px,8vw,43px)}
+}
+@media(max-width:380px){
+  .membership-intro h1{font-size:30px}
+  .membership-intro>.eyebrow{font-size:8px}
+  .membership-page .price-card{padding-inline:23px}
+  .membership-invite-shell{padding:29px 21px}
+  .membership-invite-shell h2{font-size:26px}
+  .contact-intro h1{font-size:28px}
+  .contact-intro>.eyebrow{font-size:9px}
+  .contact-panel{padding:25px 19px}
+  .contact-panel>h2{font-size:24px}
+  .contact-panel form .button-primary{font-size:12px;padding-inline:13px}
+  .visit-copy h2{font-size:26px}
+}
+@media(prefers-reduced-motion:reduce){
+  .visit-photo{transform:none!important}
+  .is-loaded .membership-intro,.is-loaded .contact-intro{animation:none!important}
+}
+.product-contact-context{font-size:12px;line-height:1.8;color:var(--muted);border-left:2px solid var(--accent-text);padding-left:14px}

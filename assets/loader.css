@@ -1,0 +1,27 @@
+/* Theme-aware first-load screen. It never waits on below-the-fold assets. */
+.page-loader{position:fixed;inset:0;z-index:1000;display:grid;place-items:center;padding:24px;background:var(--bg);color:var(--ink);opacity:0;visibility:hidden;pointer-events:none;transition:opacity .4s ease,visibility 0s .4s}
+.is-loading{overflow:hidden}
+.is-loading .page-loader{opacity:1;visibility:visible;pointer-events:auto;transition:none}
+.loader-content{width:min(100%,330px);text-align:center}
+.loader-orbit{position:relative;display:grid;place-items:center;width:150px;height:150px;margin:0 auto 35px;border:1px solid var(--line);border-radius:50%;perspective:600px}
+.loader-orbit::before{content:'';position:absolute;inset:-2px;border:2px solid transparent;border-top-color:var(--accent-text);border-right-color:var(--accent-text);border-radius:50%;animation:loader-spin 1.6s cubic-bezier(.45,.1,.45,.9) infinite}
+.loader-orbit::after{content:'';position:absolute;inset:13px;border:1px dashed var(--line);border-radius:50%;animation:loader-spin 12s linear reverse infinite}
+.loader-emblem{display:grid;place-items:center;width:72px;height:82px;border-radius:14px;background:var(--accent);color:var(--accent-ink);transform:rotate(-8deg);box-shadow:0 14px 35px #91be1c18;animation:loader-lift 2s ease-in-out infinite}
+.loader-emblem svg{width:45px;height:45px}
+.loader-wordmark{font:800 clamp(26px,6vw,34px)/1.2 var(--body);letter-spacing:-1.5px}
+.loader-wordmark span{color:var(--accent-text)}
+.loader-caption{margin-top:15px;font-size:10px;font-weight:500;line-height:1.8;letter-spacing:1.2px;color:var(--muted)}
+.loader-track{height:3px;width:min(100%,250px);overflow:hidden;margin:28px auto 18px;border-radius:10px;background:var(--line)}
+.loader-track span{display:block;width:40%;height:100%;border-radius:inherit;background:var(--accent-text);animation:loader-progress 1.25s ease-in-out infinite}
+.loader-note{font-size:9px;font-weight:500;letter-spacing:2px;color:var(--muted)}
+.is-loaded .hero-copy{animation:loader-reveal .6s var(--ease) both}
+.is-loaded .athlete-panel{animation:loader-reveal .75s var(--ease) .08s both}
+@keyframes loader-spin{to{rotate:360deg}}
+@keyframes loader-lift{0%,100%{transform:translateY(0) rotateY(-12deg) rotate(-8deg)}50%{transform:translateY(-7px) rotateY(12deg) rotate(-4deg)}}
+@keyframes loader-progress{from{transform:translateX(-110%)}to{transform:translateX(360%)}}
+@keyframes loader-reveal{from{opacity:0;translate:0 16px}to{opacity:1;translate:0 0}}
+@media(prefers-reduced-motion:reduce){
+  .page-loader{transition:none}
+  .loader-orbit::before,.loader-orbit::after,.loader-emblem,.loader-track span,.is-loaded .hero-copy,.is-loaded .athlete-panel{animation:none!important}
+  .loader-track span{width:100%}
+}

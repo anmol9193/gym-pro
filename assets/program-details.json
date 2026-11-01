@@ -1,0 +1,548 @@
+[
+  {
+    "slug": "strength-training",
+    "name": "Strength Training",
+    "category": "strength",
+    "image": "conditioning.jpg",
+    "alt": "Barbell strength training on the gym floor",
+    "tag": "BUILD YOUR FOUNDATION",
+    "categoryLabel": "STRENGTH",
+    "lead": "Make every rep mean more.",
+    "description": "Build a strong foundation with focused lifting, sound technique and a plan that grows with you. Explore free weights, machines and steady progress at your own level.",
+    "audience": "New lifters and anyone ready to build everyday strength.",
+    "existingFocus": [
+      "Movement fundamentals and lifting technique",
+      "Free weights, machines and controlled progression",
+      "A consistent routine built around your goals"
+    ],
+    "headline": [
+      "STRENGTH",
+      "TRAINING."
+    ],
+    "overviewTitle": [
+      "A STRONG",
+      "FOUNDATION."
+    ],
+    "overview": "Strength training is about learning the movements, understanding your effort and building a routine you can return to. Start from your current experience and discuss the direction you want to take with the gym team.",
+    "facts": [
+      [
+        "Focus",
+        "Strength & technique"
+      ],
+      [
+        "Training style",
+        "Weights & machines"
+      ],
+      [
+        "Starting point",
+        "Your current experience"
+      ]
+    ],
+    "fit": [
+      "You want a clearer routine on the gym floor.",
+      "You enjoy learning and practising lifting movements.",
+      "You want to focus on your own next personal best."
+    ],
+    "focus": [
+      {
+        "title": "Learn the movements.",
+        "text": "Explore the fundamentals of lifting and get familiar with the equipment you use."
+      },
+      {
+        "title": "Train with intention.",
+        "text": "Bring a clear purpose to your sessions and work on controlled, consistent practice."
+      },
+      {
+        "title": "Build your routine.",
+        "text": "Discuss your goals and review how your training fits into everyday life."
+      }
+    ],
+    "flow": [
+      {
+        "title": "Find your starting point.",
+        "text": "Talk through your experience, goals and the movements you want to become comfortable with."
+      },
+      {
+        "title": "Practise with a purpose.",
+        "text": "Work through the focus of your session with attention to technique and the task in front of you."
+      },
+      {
+        "title": "Review your next step.",
+        "text": "Reflect on what you learned and discuss where you want your routine to go next."
+      }
+    ],
+    "faq": [
+      [
+        "Do I need lifting experience?",
+        "Share your current experience with the gym team. The program conversation can start with learning the basics or with reviewing an existing routine."
+      ],
+      [
+        "Is one-to-one coaching included?",
+        "Personal training is a separate program. Elite membership includes four personal training sessions per month; you can compare the existing plans or ask about individual guidance."
+      ],
+      [
+        "How do I enquire about this program?",
+        "Use the enquiry button on this page. Strength Training will already be selected in the Contact form, where you can add your goals or questions."
+      ]
+    ],
+    "related": [
+      "personal-training",
+      "yoga-mobility"
+    ]
+  },
+  {
+    "slug": "hiit-cardio",
+    "name": "HIIT & Cardio",
+    "category": "conditioning",
+    "image": "cardio.jpg",
+    "alt": "Athlete running outdoors for cardio conditioning",
+    "tag": "FIND ANOTHER GEAR",
+    "categoryLabel": "CONDITIONING",
+    "lead": "Bring the energy. Find your rhythm.",
+    "description": "Explore a mix of cardio work, functional movements and interval training. Find a pace that challenges you while keeping the session varied and engaging.",
+    "audience": "People who enjoy energetic training and want to work on endurance.",
+    "existingFocus": [
+      "Varied cardio and functional movements",
+      "Intervals adapted to your starting point",
+      "Pacing, stamina and whole-body conditioning"
+    ],
+    "headline": [
+      "HIIT &",
+      "CARDIO."
+    ],
+    "overviewTitle": [
+      "FIND YOUR",
+      "NEXT GEAR."
+    ],
+    "overview": "Conditioning gives you a different way to move: varied activities, a clear session focus and a pace that starts with your experience. Explore cardio and functional training while discussing what suits your interests with the team.",
+    "facts": [
+      [
+        "Focus",
+        "Endurance & energy"
+      ],
+      [
+        "Training style",
+        "Cardio & intervals"
+      ],
+      [
+        "Starting point",
+        "A pace to discuss"
+      ]
+    ],
+    "fit": [
+      "You enjoy energetic, varied training.",
+      "You want to explore cardio and functional movements.",
+      "You are interested in building a regular conditioning routine."
+    ],
+    "focus": [
+      {
+        "title": "Mix up your movement.",
+        "text": "Explore a variety of cardio and functional activities rather than repeating the same session."
+      },
+      {
+        "title": "Find your rhythm.",
+        "text": "Discuss pacing and your starting point so the session has a clear, purposeful direction."
+      },
+      {
+        "title": "Keep it consistent.",
+        "text": "Think about how conditioning fits alongside the rest of your training and everyday routine."
+      }
+    ],
+    "flow": [
+      {
+        "title": "Talk about your experience.",
+        "text": "Share what you enjoy, your current routine and what you want to work towards."
+      },
+      {
+        "title": "Get into the session.",
+        "text": "Follow the planned focus through a mix of movement and conditioning activities."
+      },
+      {
+        "title": "Reflect on your rhythm.",
+        "text": "Discuss the session and what you want to explore or adjust next time."
+      }
+    ],
+    "faq": [
+      [
+        "Is this only for experienced members?",
+        "Talk about your current experience and preferences with the team before choosing a starting point. The aim is to find a suitable direction for your training."
+      ],
+      [
+        "Can I combine cardio with strength training?",
+        "You can discuss a mix of activities with the gym team. The program and membership pages show the available directions and existing class inclusions."
+      ],
+      [
+        "Which plan includes group classes?",
+        "Basic includes two group classes per month. Pro and Elite include unlimited group classes. Confirm the activities available through your chosen plan with the gym."
+      ]
+    ],
+    "related": [
+      "boxing-mma",
+      "strength-training"
+    ]
+  },
+  {
+    "slug": "personal-training",
+    "name": "Personal Training",
+    "category": "strength",
+    "image": "hero-athlete.jpg",
+    "alt": "Athlete following a focused strength training plan",
+    "tag": "A PLAN THAT GETS YOU",
+    "categoryLabel": "PERSONAL COACHING",
+    "lead": "Your goals deserve a personal plan.",
+    "description": "Get one-to-one attention and a training approach built around your experience, preferences and goals. Work with a coach to keep your sessions purposeful.",
+    "audience": "Anyone looking for individual guidance and accountability.",
+    "existingFocus": [
+      "A conversation about your goals and starting point",
+      "Guided sessions with attention to technique",
+      "Check-ins and adjustments as your routine develops"
+    ],
+    "headline": [
+      "PERSONAL",
+      "TRAINING."
+    ],
+    "overviewTitle": [
+      "A PLAN BUILT",
+      "AROUND YOU."
+    ],
+    "overview": "One-to-one attention makes room for a more personal conversation about your training. Share your goals, discuss the movements you want to learn and work with a coach on a direction that reflects your experience and preferences.",
+    "facts": [
+      [
+        "Focus",
+        "Individual guidance"
+      ],
+      [
+        "Training style",
+        "One-to-one coaching"
+      ],
+      [
+        "Starting point",
+        "Your goals & routine"
+      ]
+    ],
+    "fit": [
+      "You would like individual attention during training.",
+      "You value a clear conversation about your goals.",
+      "You want someone to review your routine with you."
+    ],
+    "focus": [
+      {
+        "title": "Start with your goals.",
+        "text": "Talk about your training experience, preferences and what you would like to work towards."
+      },
+      {
+        "title": "Get focused guidance.",
+        "text": "Bring attention to the movements and training choices that matter to your individual routine."
+      },
+      {
+        "title": "Review as you go.",
+        "text": "Use check-ins to discuss your experience and adjust the direction of your sessions."
+      }
+    ],
+    "flow": [
+      {
+        "title": "Share your starting point.",
+        "text": "Discuss your goals, experience and the practical details of your everyday routine."
+      },
+      {
+        "title": "Train with attention.",
+        "text": "Work through your session with individual guidance and a clear training focus."
+      },
+      {
+        "title": "Keep the conversation going.",
+        "text": "Reflect on the session, ask questions and review your next goals with your coach."
+      }
+    ],
+    "faq": [
+      [
+        "Is personal training suitable for a beginner?",
+        "You can start the conversation at any experience level. Tell the team what you want help with and discuss an appropriate starting point."
+      ],
+      [
+        "Is personal training part of Elite?",
+        "Elite includes four personal training sessions per month, along with the existing Pro features. The membership page compares the plans."
+      ],
+      [
+        "Can I discuss a specific training goal?",
+        "Yes. Add your goal to the optional message in your enquiry draft so you have a clear starting point for a conversation with the gym."
+      ]
+    ],
+    "related": [
+      "strength-training",
+      "diet-planning"
+    ]
+  },
+  {
+    "slug": "boxing-mma",
+    "name": "Boxing & MMA",
+    "category": "conditioning",
+    "image": "boxing.jpg",
+    "alt": "Boxing gloves ready for a focused training session",
+    "tag": "STRONG BODY. SHARP MIND.",
+    "categoryLabel": "COMBAT & CONDITIONING",
+    "lead": "Build focus with every movement.",
+    "description": "Discover combat-inspired training through footwork, coordination and technique. Combine focused practice with conditioning and a disciplined approach to movement.",
+    "audience": "People interested in combat skills, coordination and active conditioning.",
+    "existingFocus": [
+      "Footwork, balance and movement fundamentals",
+      "Boxing and martial arts technique practice",
+      "Coordination, focus and conditioning"
+    ],
+    "headline": [
+      "BOXING &",
+      "MMA."
+    ],
+    "overviewTitle": [
+      "STRONG BODY.",
+      "SHARP FOCUS."
+    ],
+    "overview": "Explore combat-inspired movement through technique, footwork and conditioning. Start with the skills that interest you and discuss the training format with the team before finding your place in the program.",
+    "facts": [
+      [
+        "Focus",
+        "Technique & coordination"
+      ],
+      [
+        "Training style",
+        "Combat-inspired movement"
+      ],
+      [
+        "Starting point",
+        "A conversation with the team"
+      ]
+    ],
+    "fit": [
+      "You are interested in boxing or martial arts skills.",
+      "You enjoy movement that calls for focus and coordination.",
+      "You want a different direction for conditioning."
+    ],
+    "focus": [
+      {
+        "title": "Build your footwork.",
+        "text": "Explore balance, coordination and the movement fundamentals behind combat training."
+      },
+      {
+        "title": "Practise technique.",
+        "text": "Learn about the skills and focused practice that form the core of the program."
+      },
+      {
+        "title": "Bring your focus.",
+        "text": "Connect movement practice with conditioning and a disciplined approach to each session."
+      }
+    ],
+    "flow": [
+      {
+        "title": "Choose your direction.",
+        "text": "Talk about the skills you are interested in and your current training experience."
+      },
+      {
+        "title": "Focus on the fundamentals.",
+        "text": "Explore the planned movement and technique work with attention to the session focus."
+      },
+      {
+        "title": "Discuss what comes next.",
+        "text": "Ask questions, review your experience and talk about the next areas you want to practise."
+      }
+    ],
+    "faq": [
+      [
+        "Do I need boxing or MMA experience?",
+        "Share your current experience and interests with the gym team so you can discuss a suitable starting point."
+      ],
+      [
+        "What training format is available?",
+        "The program focuses on footwork, technique, coordination and conditioning. Ask the team about the specific class format and activities before your visit."
+      ],
+      [
+        "Can I add this to my existing routine?",
+        "Discuss your current training and what interests you about combat-inspired movement with the gym team."
+      ]
+    ],
+    "related": [
+      "hiit-cardio",
+      "yoga-mobility"
+    ]
+  },
+  {
+    "slug": "yoga-mobility",
+    "name": "Yoga & Mobility",
+    "category": "recovery",
+    "image": "yoga.jpg",
+    "alt": "Yoga practice focused on breathing and controlled movement",
+    "tag": "MAKE ROOM TO RECOVER",
+    "categoryLabel": "MIND & RECOVERY",
+    "lead": "Move with a little more intention.",
+    "description": "Make time for breathing, controlled movement and mobility work. Explore a quieter side of your training and create space to move at a comfortable pace.",
+    "audience": "Anyone who wants to complement their training with mindful movement.",
+    "existingFocus": [
+      "Breathing and body awareness",
+      "Mobility and controlled movement practice",
+      "A balanced addition to your weekly routine"
+    ],
+    "headline": [
+      "YOGA &",
+      "MOBILITY."
+    ],
+    "overviewTitle": [
+      "MOVE WITH",
+      "MORE INTENT."
+    ],
+    "overview": "Explore a quieter, more mindful part of your training. Make room for breathing, body awareness and controlled movement, with a focus on finding a comfortable starting point for your practice.",
+    "facts": [
+      [
+        "Focus",
+        "Mobility & awareness"
+      ],
+      [
+        "Training style",
+        "Mindful movement"
+      ],
+      [
+        "Starting point",
+        "Your current practice"
+      ]
+    ],
+    "fit": [
+      "You want to explore controlled, mindful movement.",
+      "You would like to make room for mobility in your routine.",
+      "You enjoy taking time to focus on breathing and body awareness."
+    ],
+    "focus": [
+      {
+        "title": "Bring your attention.",
+        "text": "Explore breathing and body awareness as part of a focused movement practice."
+      },
+      {
+        "title": "Move with control.",
+        "text": "Make time for mobility work and a thoughtful approach to the movements you practise."
+      },
+      {
+        "title": "Find your balance.",
+        "text": "Discuss how mindful movement can sit alongside your other training interests."
+      }
+    ],
+    "flow": [
+      {
+        "title": "Share your experience.",
+        "text": "Tell the team about your current practice, interests and what you would like to explore."
+      },
+      {
+        "title": "Move with intention.",
+        "text": "Follow the planned session focus through breathing and controlled movement practice."
+      },
+      {
+        "title": "Take time to reflect.",
+        "text": "Notice your experience of the session and discuss what you would like to work on next."
+      }
+    ],
+    "faq": [
+      [
+        "Do I need an existing yoga practice?",
+        "Tell the team about your starting point and interests. You can discuss the available class format before joining."
+      ],
+      [
+        "Can I combine this with other training?",
+        "Yes, you can discuss how a mix of programs fits your routine with the gym team."
+      ],
+      [
+        "What should I bring?",
+        "Comfortable workout clothes, a water bottle and your questions are useful starting points. Ask the team about any equipment needed for the specific session."
+      ]
+    ],
+    "related": [
+      "strength-training",
+      "diet-planning"
+    ]
+  },
+  {
+    "slug": "diet-planning",
+    "name": "Diet Planning",
+    "category": "recovery",
+    "image": "nutrition.jpg",
+    "alt": "Fresh ingredients and balanced meals for everyday nutrition",
+    "tag": "FUEL THE BIGGER PICTURE",
+    "categoryLabel": "EVERYDAY NUTRITION",
+    "lead": "Make everyday choices work for you.",
+    "description": "Talk through your goals, food preferences and everyday routine. Explore practical meal planning that fits your lifestyle and supports your training habits.",
+    "audience": "People looking for structure and consistency in their everyday meals.",
+    "existingFocus": [
+      "Your food preferences, routine and training goals",
+      "Practical meal planning and everyday food choices",
+      "Simple habits you can work into your lifestyle"
+    ],
+    "headline": [
+      "DIET",
+      "PLANNING."
+    ],
+    "overviewTitle": [
+      "FUEL THE",
+      "BIGGER PICTURE."
+    ],
+    "overview": "Everyday meal planning starts with the way you live. Discuss your food preferences, training interests and routine, then explore practical structure for choices you can work into your day.",
+    "facts": [
+      [
+        "Focus",
+        "Everyday nutrition habits"
+      ],
+      [
+        "Planning style",
+        "Your preferences & routine"
+      ],
+      [
+        "Starting point",
+        "Your everyday choices"
+      ]
+    ],
+    "fit": [
+      "You would like more structure around everyday meals.",
+      "You want to discuss food preferences alongside training goals.",
+      "You value practical habits that fit into your routine."
+    ],
+    "focus": [
+      {
+        "title": "Start with real life.",
+        "text": "Talk about your food preferences, daily routine and the training goals you have in mind."
+      },
+      {
+        "title": "Explore practical structure.",
+        "text": "Discuss everyday meal planning and choices that fit the way you live."
+      },
+      {
+        "title": "Keep habits in focus.",
+        "text": "Think about consistency and the small practical changes you want to explore."
+      }
+    ],
+    "flow": [
+      {
+        "title": "Talk through your routine.",
+        "text": "Share your everyday habits, food preferences and what you would like help organising."
+      },
+      {
+        "title": "Explore your options.",
+        "text": "Discuss the meal-planning guidance available and the practical choices that interest you."
+      },
+      {
+        "title": "Review what fits.",
+        "text": "Reflect on your routine and keep the conversation focused on workable everyday habits."
+      }
+    ],
+    "faq": [
+      [
+        "Is a diet plan included in Pro?",
+        "The existing Pro and Elite memberships include a personalised diet plan. Compare the membership details and discuss the guidance available with the gym."
+      ],
+      [
+        "Can I mention my food preferences?",
+        "Yes. Use the optional enquiry message to note the preferences and routine you want to discuss."
+      ],
+      [
+        "Do I have to choose a training program too?",
+        "You can enquire about Diet Planning on its own or mention other training interests in your message."
+      ]
+    ],
+    "related": [
+      "personal-training",
+      "yoga-mobility"
+    ]
+  }
+]
