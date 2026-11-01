@@ -3,14 +3,14 @@ const { chromium } = require(process.env.PLAYWRIGHT_MODULE || 'playwright');
 const fs = require('node:fs');
 const path = require('node:path');
 const root = path.resolve(__dirname, '..');
-const origin = process.env.PREVIEW_ORIGIN || 'http://127.0.0.1:8765';
-const allSlugs = JSON.parse(fs.readFileSync(path.join(root, 'assets/products.json'), 'utf8')).map(item => item.slug);
+const origin = process.env.PREVIEW_ORIGIN || 'http://127.0.0.1:8000';
+const allSlugs = JSON.parse(fs.readFileSync(path.join(root, 'resources/data/products.json'), 'utf8')).map(item => item.slug);
 const slugs = process.argv.length > 2 ? process.argv.slice(2) : allSlugs;
 if (slugs.some(slug => !allSlugs.includes(slug))) throw new Error('Unknown product slug.');
 (async () => {
   const browser = await chromium.launch({ executablePath: process.env.CHROME_PATH || 'C:/Program Files/Google/Chrome/Application/chrome.exe', headless: true, args: ['--enable-unsafe-swiftshader'] });
   const page = await browser.newPage({ viewport: { width: 1000, height: 1000 } });
-  await page.goto(`${origin}/index.html`, { waitUntil: 'load' });
+  await page.goto(`${origin}/`, { waitUntil: 'load' });
   await page.addScriptTag({ path: path.join(__dirname, 'product-models.js') });
   await page.evaluate(async () => {
     await document.fonts.ready;
@@ -42,7 +42,7 @@ if (slugs.some(slug => !allSlugs.includes(slug))) throw new Error('Unknown produ
       return image;
     };
   });
-  const target = path.join(root, 'assets/products'); fs.mkdirSync(target, { recursive: true });
+  const target = path.join(root, 'public/assets/products'); fs.mkdirSync(target, { recursive: true });
   for (const slug of slugs) {
     for (let view = 0; view < 3; view++) {
       const encoded = await page.evaluate(({ slug, view }) => window.renderProductView(slug, view), { slug, view });

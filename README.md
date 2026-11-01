@@ -1,87 +1,141 @@
-# BEAST MODE Gym
+# BEAST MODE Gym - Laravel
 
-A responsive static gym website with Poppins typography, dark/light themes,
-an animated loader, a Three.js dumbbell scene and locally hosted assets.
+Laravel 13 application for the existing responsive gym website. Includes the
+homepage, Our Approach, Membership, Contact, six training programs and fourteen
+demo products (equipment and eight supplement concepts).
 
-## Pages
+## Requirements
 
-- Homepage with training programs, owner introduction, equipment and supplements.
-- Programs catalog, Our Approach, Membership and Contact.
-- Six individual training program pages.
-- Fourteen demo products: six equipment/accessory products and eight supplements.
-- Product category/type filters, search, three-view galleries and image zoom.
+- PHP 8.3 or newer, with the standard Laravel extensions and PDO SQLite.
+- Composer 2.
+- Node.js and npm for the optional Vite asset pipeline.
 
-Supplement concepts include whey protein, whey isolate, plant protein, creatine
-monohydrate, pre-workout, mass gainer, multivitamin and omega-3.
-
-## Run locally
-
-No build step is required. Open `index.html`, or serve the project with Python:
+## Start the configured local project
 
 ```powershell
-python -m http.server 8765 --bind 127.0.0.1
+composer dev
 ```
 
-Visit <http://127.0.0.1:8765/index.html>.
+Open <http://127.0.0.1:8000>. You can also run:
 
-Upload the root HTML files and `assets/` directory together to a static host.
-Keep their relative paths unchanged.
+```powershell
+php artisan serve --host=127.0.0.1 --port=8000
+```
+
+The current design uses local files in `public/assets`, so it does not require
+Vite's development server to display the website.
+
+## Set up a fresh clone
+
+```powershell
+git clone https://github.com/anmol9193/gym-pro.git
+cd gym-pro
+composer setup
+composer dev
+```
+
+`composer setup` installs dependencies, copies `.env.example` if needed,
+generates the local application key, creates the SQLite file, runs migrations
+and builds the optional Vite assets. Run it for a fresh installation; it generates
+an application key. The local `.env`, SQLite data, dependencies and generated
+build output are excluded from Git.
 
 ## Project structure
 
-- `assets/`: local styles, scripts, fonts, photographs and product renders.
-- `assets/products.json`: product content and related product references.
-- `assets/program-details.json`: individual training program content.
-- `scripts/build-product-pages.py`: rebuilds the product catalog/detail pages,
-  homepage previews and Contact product choices.
-- `scripts/build-program-pages.py`: rebuilds training program detail pages.
-- `scripts/product-models.js` and `scripts/render-products.cjs`: original
-  procedural product models and three-view image rendering.
-- `design-review/`: design contracts and browser verification scripts.
+- `app/Http/Controllers`: page, product, program and legacy redirect controllers.
+- `app/Support/SiteCatalog.php`: loads the editable demo catalog.
+- `resources/views/layouts/site.blade.php`: shared page layout and loader.
+- `resources/views/partials`: navigation, footer and reusable product cards.
+- `resources/views/pages`: home, approach, membership and contact content.
+- `resources/views/products`: data-backed catalog and product detail template.
+- `resources/views/programs`: program catalog and shared detail template.
+- `resources/data/products.json`: equipment and supplement content.
+- `resources/data/programs.json`: training program content.
+- `public/assets`: Poppins, styles, scripts, photographs and 3D product renders.
+- `routes/web.php`: named application routes.
+- `database/migrations`: standard Laravel database foundations.
 
-Rebuild static pages after editing their source content:
+Edit the Blade views directly. Catalog content is stored in JSON; no static page
+generation step is needed. The two obsolete Python page builders have been
+replaced by Laravel views and controllers.
+
+## URLs
+
+- `/`
+- `/programs` and `/programs/{slug}`
+- `/products` and `/products/{slug}`
+- `/our-approach`, `/membership`, `/contact`
+- `/products?category=supplements&type=protein` filters supplement concepts.
+
+Previous `.html` URLs redirect permanently to their Laravel routes and preserve
+query parameters for product, program, membership and supplement selections.
+
+## Database
+
+Local development uses `database/database.sqlite`. Sessions and cache use local
+files; the queue is synchronous. No database server or queue worker is required
+to browse the website.
 
 ```powershell
-python scripts/build-program-pages.py
-python scripts/build-product-pages.py
+php artisan migrate
+php artisan migrate:status
 ```
 
-## Browser checks
+To use MySQL later, create a database, update `DB_CONNECTION`, `DB_HOST`,
+`DB_PORT`, `DB_DATABASE`, `DB_USERNAME` and `DB_PASSWORD` in your local `.env`,
+then run `php artisan config:clear` followed by `php artisan migrate`.
 
-The verification scripts require Node.js, Playwright and a local Chrome install.
-With the Python preview server running, optional QA dependencies can be kept in
-an ignored directory:
+## Verification
+
+```powershell
+composer validate --strict
+php vendor/bin/pint --test
+php artisan test
+composer audit
+npm run build
+```
+
+PHP feature tests cover all pages, dynamic catalog details, SQLite migrations,
+legacy redirects, missing routes and shared navigation/assets. Browser checks
+require Playwright and Chrome, with the Laravel server running:
 
 ```powershell
 npm install --prefix .qa --no-save playwright
 $env:PLAYWRIGHT_MODULE = (Resolve-Path '.qa/node_modules/playwright').Path
-node design-review/verify-products.cjs
-node design-review/audit-mobile.cjs --after
-node design-review/verify-mobile.cjs
+node design-review/verify-laravel.cjs
 ```
 
-Checks cover responsive layouts, touch controls, themes, menu navigation,
-filters/search, galleries, enquiry validation and local links. Screenshots and
-generated reports stay local and are excluded from Git.
+Set `CHROME_PATH` if Chrome is installed elsewhere, and `PREVIEW_ORIGIN` if using
+a different preview URL. Screenshots and generated browser reports stay local.
+`design-review/legacy-static` contains historical checks for the old HTML version.
 
-To regenerate all product renders, with the same QA setup and server:
+## Product renders
+
+Original procedural models live in `scripts/product-models.js`. To regenerate
+local product images with the browser QA dependencies and server running:
 
 ```powershell
 node scripts/render-products.cjs
 ```
 
+This reads `resources/data/products.json` and writes to `public/assets/products`.
+
+## Hosting
+
+Point the web server or WAMP virtual host document root to this project's
+`public` directory. Use a PHP/Laravel host for this application. Set production
+`.env` values, including `APP_DEBUG=false`, and run migrations as appropriate.
+
 ## Demo content and enquiries
 
-Products and supplement packaging are concepts; actual ingredients, sizes,
-availability and prices are to be confirmed. The owner introduction is a sample
-profile. Gym contact details remain clearly marked placeholders.
-
-Enquiry forms create an editable/copyable draft in the current browser tab.
-They do not send messages, process orders or store personal details. Only the
-theme preference is saved locally.
+Product and supplement visuals are concepts; actual labels, sizes, availability
+and prices are to be confirmed. The owner introduction is a sample profile and
+gym contact details remain placeholders. Enquiry forms still prepare editable,
+copyable local drafts. They do not send messages, process orders or store
+personal details. Only the theme preference is saved in browser storage.
 
 ## Credits
 
 Designed & Developed by [Anmol Saini](https://anmolsaini.wuaze.com).
-Asset sources and bundled font/Three.js license information are documented in
-[`assets/SOURCES.md`](assets/SOURCES.md).
+Photography, fonts, original renders and third-party license details are recorded
+in [`public/assets/SOURCES.md`](public/assets/SOURCES.md).
