@@ -2,8 +2,7 @@
 
 namespace App\Support;
 
-use App\Models\Product;
-use App\Models\Program;
+use Illuminate\Support\Facades\File;
 
 final class SiteCatalog
 {
@@ -13,8 +12,12 @@ final class SiteCatalog
 
     public function __construct()
     {
-        $this->products = Product::orderBy('position')->get()->map->catalogData()->all();
-        $this->programs = Program::orderBy('position')->get()->map->catalogData()->all();
+        $products = File::json(resource_path('data/products.json'));
+        $this->products = array_map(fn (array $product, int $index): array => [
+            ...$product,
+            'number' => str_pad((string) ($index + 1), 2, '0', STR_PAD_LEFT),
+        ], $products, array_keys($products));
+        $this->programs = File::json(resource_path('data/programs.json'));
     }
 
     public function products(): array

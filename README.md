@@ -1,159 +1,152 @@
-# GYM PRO
+# BEAST MODE Gym - Laravel
 
-Single-gym Laravel application for BEAST MODE Gym. The primary specification is
-[GYM_PRO_Codex_Implementation_Prompt.md](GYM_PRO_Codex_Implementation_Prompt.md).
-Current delivery is **Milestone 1: foundation**; see
-[DEVELOPMENT_PROGRESS.md](DEVELOPMENT_PROGRESS.md) for verified scope and limits.
+Laravel 13 application for the existing responsive gym website. Includes the
+homepage, Our Approach, Membership, Contact, six training programs and fourteen
+demo products (equipment and eight supplement concepts).
 
-## Requirements and stack
+The latest scope is a **login-page and dashboard design preview** matching the
+public site's Poppins, citron/charcoal and white light theme. Open `/login` or
+`/dashboard`. Use **Preview dashboard** without credentials. All dashboard data
+is labelled sample content; these pages do not authenticate or store accounts.
+The previous management foundation was reverted at the user's request. Its
+specification is preserved in `docs/archive` and its code in Git history.
 
-- PHP 8.3+ with PDO MySQL, mbstring, OpenSSL, fileinfo, DOM/XML and standard Laravel extensions.
-- Composer 2, MySQL 8, Node.js 22.12+ and npm (verified locally with Node 24).
-- Laravel 13, Fortify, Spatie Laravel Permission, Blade, Bootstrap 5 and Alpine.js.
-- PDO SQLite for the isolated automated test suite.
+## Requirements
 
-## Local installation
+- PHP 8.3 or newer, with the standard Laravel extensions and PDO SQLite.
+- Composer 2.
+- Node.js and npm for the optional Vite asset pipeline.
+
+## Start the configured local project
+
+```powershell
+composer dev
+```
+
+Open <http://localhost:8000>. You can also run:
+
+```powershell
+php artisan serve --host=localhost --port=8000
+```
+
+The current design uses local files in `public/assets`, so it does not require
+Vite's development server to display the website.
+
+## Set up a fresh clone
 
 ```powershell
 git clone https://github.com/anmol9193/gym-pro.git
 cd gym-pro
-Copy-Item .env.example .env
-```
-
-Create the MySQL database and a dedicated database-scoped account using your
-database administration tool. Do not use the MySQL root account in the app.
-Example SQL, replacing the password placeholder with your own unique secret:
-
-```sql
-CREATE DATABASE gym_pro CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
-CREATE USER 'gym_pro_app'@'localhost' IDENTIFIED BY 'REPLACE_WITH_A_UNIQUE_SECRET';
-GRANT SELECT, INSERT, UPDATE, DELETE, CREATE, ALTER, INDEX, DROP, REFERENCES
-ON gym_pro.* TO 'gym_pro_app'@'localhost';
-```
-
-Set `DB_HOST=localhost`, `DB_PORT=3306`, `DB_DATABASE=gym_pro`,
-`DB_USERNAME=gym_pro_app` and your private `DB_PASSWORD` in `.env`. Keep
-`APP_URL=http://localhost:8000`. Then:
-
-```powershell
 composer setup
-php artisan db:seed --class=DemoAccountsSeeder
 composer dev
 ```
 
-`composer setup` installs locked dependencies, creates an application key only
-if absent, runs migrations/standard seeders and builds Vite assets. It refuses
-non-local environments. It does not provision MySQL or replace an existing key.
-Never run `migrate:fresh` against the gym's working database.
+`composer setup` installs dependencies, copies `.env.example` if needed,
+generates the local application key, creates the SQLite file, runs migrations
+and builds the optional Vite assets. Run it for a fresh installation; it generates
+an application key. The local `.env`, SQLite data, dependencies and generated
+build output are excluded from Git.
 
-Open <http://localhost:8000/login>. Local demo accounts have individually generated
-passwords in **`storage/app/private/local-demo-credentials.json`**, an ignored file.
-The six accounts are Super Admin, Gym Admin, Receptionist, two Trainers and Member.
-Every demo account must change its password at first sign-in. Reseeding preserves
-existing accounts and passwords; the credential file records initial passwords
-only. The demo seeder refuses production even when `--force` is supplied.
+## Project structure
 
-For an initial administrator without demo accounts:
+- `app/Http/Controllers`: page, product, program and legacy redirect controllers.
+- `app/Support/SiteCatalog.php`: loads the editable demo catalog.
+- `resources/views/layouts/site.blade.php`: shared page layout and loader.
+- `resources/views/partials`: navigation, footer and reusable product cards.
+- `resources/views/pages`: home, approach, membership and contact content.
+- `resources/views/products`: data-backed catalog and product detail template.
+- `resources/views/programs`: program catalog and shared detail template.
+- `resources/data/products.json`: equipment and supplement content.
+- `resources/data/programs.json`: training program content.
+- `public/assets`: Poppins, styles, scripts, photographs and 3D product renders.
+- `resources/views/portal`: login and dashboard visual previews.
+- `public/assets/portal.css` and `portal.js`: matching theme and local interactions.
+- `routes/web.php`: named application routes.
+- `database/migrations`: standard Laravel database foundations.
+
+Edit the Blade views directly. Catalog content is stored in JSON; no static page
+generation step is needed. The two obsolete Python page builders have been
+replaced by Laravel views and controllers.
+
+## URLs
+
+- `/`
+- `/login` and `/dashboard` (public visual previews)
+- `/programs` and `/programs/{slug}`
+- `/products` and `/products/{slug}`
+- `/our-approach`, `/membership`, `/contact`
+- `/products?category=supplements&type=protein` filters supplement concepts.
+
+Previous `.html` URLs redirect permanently to their Laravel routes and preserve
+query parameters for product, program, membership and supplement selections.
+
+## Database
+
+Local development uses `database/database.sqlite`. Sessions and cache use local
+files; the queue is synchronous. No database server or queue worker is required
+to browse the website.
 
 ```powershell
-php artisan gym:create-admin owner@example.com --name="Gym Owner"
+php artisan migrate
+php artisan migrate:status
 ```
 
-The command creates a **Super Admin** and prompts privately for a strong password.
-No password belongs in command arguments or Git.
+To use MySQL later, create a database, update `DB_CONNECTION`, `DB_HOST`,
+`DB_PORT`, `DB_DATABASE`, `DB_USERNAME` and `DB_PASSWORD` in your local `.env`,
+then run `php artisan config:clear` followed by `php artisan migrate`.
 
-## Foundation behavior
-
-| Role | Default workspace and access |
-|---|---|
-| Super Admin | All foundation workspaces, accounts, permission management, configuration |
-| Gym Admin | Admin overview, account management, role viewing and configuration |
-| Receptionist | Reception workspace and own account |
-| Trainer | Trainer workspace and own account |
-| Member | Member workspace and own account |
-
-Gym Admin cannot assign/edit Super Admin access. Accounts cannot change their own
-role/status. Inactive/suspended accounts are blocked; access/password changes
-revoke database sessions. New staff accounts require a password change.
-Permission changes are audited and enforced on the server. Super Admin's full
-permission set is protected. Reseeding preserves configured role permissions.
-
-Dashboards show real account, role and public catalog counts. There are no
-fabricated membership, attendance or revenue figures. Reception/trainer/member
-screens are secure entry pages; operational modules remain pending.
-
-Login is limited after five failures per email/IP. Password recovery has an
-additional five requests per minute/IP limit. Passwords require 12 characters,
-mixed case, a number and a symbol. Reset tokens expire in 60 minutes and are
-single-use. Self-service public registration is disabled.
-
-Local `MAIL_MAILER=log` writes reset notifications to `storage/logs/laravel.log`;
-it **does not deliver email**. Keep logs private. Configure and verify a real
-email transport before piloting recovery with staff.
-
-## Existing public website
-
-The public website remains at `/`, `/programs`, `/products`, `/our-approach`,
-`/membership` and `/contact`, with six program details and fourteen product
-details. Old `.html` URLs redirect and preserve enquiry/filter queries.
-Contact stays the primary header action; account sign-in is also accessible.
-
-Catalog records now live in MySQL. `CatalogSeeder` imports `resources/data/*.json`
-only for missing slugs, preserving existing database edits. JSON remains the seed
-source and the input for `scripts/render-products.cjs`; it is not a live catalog
-editor. Public assets/Poppins/3D product renders remain in `public/assets`.
-
-Owner/contact details and products are demo content. Enquiry forms prepare local
-editable drafts; they do not send messages or save enquiries. Supplement labels,
-availability and prices require confirmation. Public enquiry integration is
-Milestone 9. The management layout uses restrained orange, with dark and white
-light themes; the public site's existing design is preserved.
-
-## Development and verification
+## Verification
 
 ```powershell
-composer dev
-# After editing management CSS/JS:
-npm run build
-# Or use npm run dev in a second terminal for Vite HMR.
 composer validate --strict
 php vendor/bin/pint --test
 php artisan test
 composer audit
-npm audit
+npm run build
 ```
 
-Tests use SQLite `:memory:` and isolated factories, never the local MySQL data.
-Browser checks exercise the running MySQL app. Install optional QA dependencies:
+PHP feature tests cover all pages, dynamic catalog details, SQLite migrations,
+legacy redirects, missing routes and shared navigation/assets. Browser checks
+require Playwright and Chrome, with the Laravel server running:
 
 ```powershell
 npm install --prefix .qa --no-save playwright
 $env:PLAYWRIGHT_MODULE = (Resolve-Path '.qa/node_modules/playwright').Path
-php design-review/foundation-fixtures.php create
-node design-review/verify-foundation.cjs
-php design-review/foundation-fixtures.php cleanup
 node design-review/verify-laravel.cjs
+node design-review/verify-portal.cjs
 ```
 
-Fixtures are local-only, private and identified by exact account IDs/emails for
-cleanup. Run cleanup even after a failed check. Set `CHROME_PATH` for a different
-Chrome location, or `PREVIEW_ORIGIN` for another server. Reports/screenshots stay
-local. Historical static tests are in `design-review/legacy-static`.
+Set `CHROME_PATH` if Chrome is installed elsewhere, and `PREVIEW_ORIGIN` if using
+a different preview URL. Screenshots and generated browser reports stay local.
+`design-review/legacy-static` contains historical checks for the old HTML version.
 
-## Organization and operations
+## Product renders
 
-- `app/Enums`, `Policies`, `Http/Requests`, `Http/Middleware`: validation/access boundaries.
-- `app/Services`: transactional account and permission rules; `app/Actions/Fortify`: recovery.
-- `routes/admin.php`, `receptionist.php`, `trainer.php`, `member.php`: protected workspaces.
-- `resources/views/layouts/management.blade.php`: shared management shell.
-- `resources/css/management.css`, `resources/js/management.js`: Bootstrap/Alpine assets.
-- `database/migrations`, `seeders`: reproducible schema and safe initial data.
+Original procedural models live in `scripts/product-models.js`. To regenerate
+local product images with the browser QA dependencies and server running:
 
-Store timestamps in UTC; display them using `GYM_TIMEZONE` (default Asia/Kolkata).
-Local queues are synchronous and no business schedules exist yet. Background
-notifications/scheduling arrive in Milestone 8; payments/QR/PWA are pending.
-Read [DEPLOYMENT.md](DEPLOYMENT.md), [BACKUP_RESTORE.md](BACKUP_RESTORE.md) and
-[STAFF_GUIDE.md](STAFF_GUIDE.md) for current operational boundaries.
+```powershell
+node scripts/render-products.cjs
+```
+
+This reads `resources/data/products.json` and writes to `public/assets/products`.
+
+## Hosting
+
+Point the web server or WAMP virtual host document root to this project's
+`public` directory. Use a PHP/Laravel host for this application. Set production
+`.env` values, including `APP_DEBUG=false`, and run migrations as appropriate.
+
+## Demo content and enquiries
+
+Product and supplement visuals are concepts; actual labels, sizes, availability
+and prices are to be confirmed. The owner introduction is a sample profile and
+gym contact details remain placeholders. Enquiry forms still prepare editable,
+copyable local drafts. They do not send messages, process orders or store
+personal details. Only the theme preference is saved in browser storage.
+
+## Credits
 
 Designed & Developed by [Anmol Saini](https://anmolsaini.wuaze.com).
-Asset licenses: [public/assets/SOURCES.md](public/assets/SOURCES.md).
+Photography, fonts, original renders and third-party license details are recorded
+in [`public/assets/SOURCES.md`](public/assets/SOURCES.md).

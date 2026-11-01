@@ -3,21 +3,11 @@
 namespace Tests\Feature;
 
 use App\Support\SiteCatalog;
-use Database\Seeders\CatalogSeeder;
-use Illuminate\Foundation\Testing\RefreshDatabase;
 use PHPUnit\Framework\Attributes\DataProvider;
 use Tests\TestCase;
 
 final class WebsiteTest extends TestCase
 {
-    use RefreshDatabase;
-
-    protected function setUp(): void
-    {
-        parent::setUp();
-        $this->seed(CatalogSeeder::class);
-    }
-
     public static function mainPages(): array
     {
         return [

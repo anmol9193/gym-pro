@@ -1,0 +1,1 @@
+<a class="brand bp-brand" href="{{ route('home') }}" aria-label="Beast Mode home"><span class="brand-mark"><svg class="icon" aria-hidden="true"><use href="#bp-bolt"/></svg></span><span>BEAST<span class="accent-text">MODE</span><small>YOUR POTENTIAL. UNLEASHED.</small></span></a>
