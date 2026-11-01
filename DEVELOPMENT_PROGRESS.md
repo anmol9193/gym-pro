@@ -77,3 +77,24 @@ URLs: `http://localhost:8000/login` and `http://localhost:8000/dashboard`.
 
 Previous Milestone 1 completion is **reverted**. Future management milestones are
 not active under this design-only scope.
+
+## Login design revision
+
+The user requested a new login design after reviewing the first version.
+
+- Replaced the oversized full-page photograph and all-caps heading with a
+  centered, contained card and a sentence-case welcome.
+- Moved the form to the left and introduced the existing boxing photograph on
+  the right, with restrained citron typography and a quieter visual hierarchy.
+- Added field icons, clearer spacing, a compact membership link and dedicated
+  responsive rules. Phones/tablets show a focused form card.
+- Preserved Poppins, dark/white themes, password visibility, email validation and
+  the existing no-credentials preview behavior. Dashboard design is unchanged.
+- New stylesheet: `public/assets/login.css`; the portal layout supports a
+  page-specific stylesheet stack. Updated the login view and design contract.
+- `php artisan test --compact --filter=PortalPreviewTest`: passed, 14 assertions.
+- Final browser recheck: **28 themed layouts passed**, including preview
+  navigation, validation, visibility toggle, chart/filters, mobile keyboard
+  navigation and no-JS access. Zero JS errors, missing assets or network writes.
+- Phone/tablet/desktop dark/light screenshots inspected and visual evidence
+  refreshed. The login design revision is complete.

@@ -9,8 +9,11 @@ theme, Poppins fonts, skewed lightning mark, rounded borders and local gym photo
 Reuse public/assets/styles.css tokens. No Bootstrap, Fortify, Spatie or new UI
 dependencies. Keep the public site and all program/product pages working.
 
-Login: branded gym photograph, large athletic heading, labelled email/password
-fields, visibility toggle, gym contact link and a clear Preview dashboard action.
+Login revision: a centered contained card, calm sentence-case welcome, form on
+the left and a boxing photograph on the right. Use restrained field icons,
+generous spacing and a clear citron Preview dashboard action. The image drops
+away on narrow screens, leaving a compact form card. Keep labelled email/password
+fields, visibility toggle and a gym contact link.
 This is a design preview: inputs are optional, credentials are never submitted,
 stored or authenticated, and the dashboard is public. No fake sign-in success.
 

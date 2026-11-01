@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="{{ asset('assets/fonts/fonts.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/styles.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/portal.css') }}">
+    @stack('styles')
     <script src="{{ asset('assets/portal.js') }}" defer></script>
 </head>
 <body class="bp-body @yield('body-class')">
