@@ -4,16 +4,16 @@ Laravel 13 application for the existing responsive gym website. Includes the
 homepage, Our Approach, Membership, Contact, six training programs and fourteen
 demo products (equipment and eight supplement concepts).
 
-The latest scope is a **login-page and dashboard design preview** matching the
-public site's Poppins, citron/charcoal and white light theme. Open `/login` or
-`/dashboard`. Use **Preview dashboard** without credentials. All dashboard data
-is labelled sample content; these pages do not authenticate or store accounts.
-The previous management foundation was reverted at the user's request. Its
-specification is preserved in `docs/archive` and its code in Git history.
+The administrator dashboard matches the public site's Poppins, citron/charcoal
+and white light themes. Sign in at `/login` with a seeded super-admin account.
+The dashboard includes illustrative fitness charts, trainers, meals and classes;
+these figures are sample content. Account settings support name/email changes,
+profile photo uploads and password changes. Authenticated pages prevent cached
+dashboard access after logout, including browser Back/Forward navigation.
 
 ## Requirements
 
-- PHP 8.3 or newer, with the standard Laravel extensions and PDO SQLite.
+- PHP 8.3 or newer, with the standard Laravel extensions, GD and PDO SQLite.
 - Composer 2.
 - Node.js and npm for the optional Vite asset pipeline.
 
@@ -47,6 +47,20 @@ and builds the optional Vite assets. Run it for a fresh installation; it generat
 an application key. The local `.env`, SQLite data, dependencies and generated
 build output are excluded from Git.
 
+Set `SUPER_ADMIN_EMAIL` and a password of your choice in the local `.env`, then
+create the administrator account:
+
+```powershell
+php artisan config:clear
+php artisan db:seed --class=SuperAdminSeeder
+```
+
+`SUPER_ADMIN_PASSWORD` must be set before seeding. Re-running this seeder resets
+the configured administrator's name and password to those configured values.
+For an existing installation, run `php artisan migrate` to add roles and the
+profile photo column. Uploaded photos stay on the private local disk and are
+served through an authenticated route; no public storage symlink is needed.
+
 ## Project structure
 
 - `app/Http/Controllers`: page, product, program and legacy redirect controllers.
@@ -59,8 +73,10 @@ build output are excluded from Git.
 - `resources/data/products.json`: equipment and supplement content.
 - `resources/data/programs.json`: training program content.
 - `public/assets`: Poppins, styles, scripts, photographs and 3D product renders.
-- `resources/views/portal`: login and dashboard visual previews.
-- `public/assets/portal.css` and `portal.js`: matching theme and local interactions.
+- `resources/views/portal`: login, dashboard, profile and password forms.
+- `resources/views/layouts/dashboard.blade.php`: shared sidebar/topbar layout.
+- `public/assets/portal.css`, `fit-dashboard.css` and `account.css`: portal styles.
+- `public/assets/portal.js` and `fit-dashboard.js`: theme, menus, charts and previews.
 - `routes/web.php`: named application routes.
 - `database/migrations`: standard Laravel database foundations.
 
@@ -71,7 +87,8 @@ replaced by Laravel views and controllers.
 ## URLs
 
 - `/`
-- `/login` and `/dashboard` (public visual previews)
+- `/login` (sign in) and `/dashboard` (super-admin access)
+- `/profile` and `/change-password` (authenticated account settings)
 - `/programs` and `/programs/{slug}`
 - `/products` and `/products/{slug}`
 - `/our-approach`, `/membership`, `/contact`
@@ -105,19 +122,25 @@ composer audit
 npm run build
 ```
 
-PHP feature tests cover all pages, dynamic catalog details, SQLite migrations,
-legacy redirects, missing routes and shared navigation/assets. Browser checks
+PHP feature tests cover public pages, catalog details, SQLite migrations,
+authentication, roles, profile/photo updates, passwords and route access. Browser checks
 require Playwright and Chrome, with the Laravel server running:
 
 ```powershell
 npm install --prefix .qa --no-save playwright
 $env:PLAYWRIGHT_MODULE = (Resolve-Path '.qa/node_modules/playwright').Path
 node design-review/verify-laravel.cjs
-node design-review/verify-portal.cjs
+node design-review/verify-fit-dashboard.cjs
+node design-review/verify-account.cjs
+node design-review/verify-profile-photo.cjs
+node design-review/verify-logout-history.cjs
 ```
 
 Set `CHROME_PATH` if Chrome is installed elsewhere, and `PREVIEW_ORIGIN` if using
 a different preview URL. Screenshots and generated browser reports stay local.
+The administrator browser checks read the local `SUPER_ADMIN_EMAIL` and
+`SUPER_ADMIN_PASSWORD`, or `QA_ADMIN_EMAIL` and `QA_ADMIN_PASSWORD` overrides.
+Keep these values aligned with the test account if its details have changed.
 `design-review/legacy-static` contains historical checks for the old HTML version.
 
 ## Product renders
@@ -150,3 +173,5 @@ personal details. Only the theme preference is saved in browser storage.
 Designed & Developed by [Anmol Saini](https://anmolsaini.wuaze.com).
 Photography, fonts, original renders and third-party license details are recorded
 in [`public/assets/SOURCES.md`](public/assets/SOURCES.md).
+Dashboard image credits are in
+[`public/assets/dashboard/SOURCES.md`](public/assets/dashboard/SOURCES.md).

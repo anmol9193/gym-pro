@@ -1,0 +1,40 @@
+const { chromium } = require(process.env.PLAYWRIGHT_MODULE || 'playwright');
+const fs = require('node:fs');
+const path = require('node:path');
+const assert = require('node:assert/strict');
+const origin = process.env.PREVIEW_ORIGIN || 'http://localhost:8000';
+const env = fs.readFileSync(path.join(__dirname, '../.env'), 'utf8');
+const value = name => (env.match(new RegExp(`^${name}=(.*)$`, 'm'))?.[1]?.trim() || '').replace(/^(["'])(.*)\1$/, '$2');
+(async () => {
+  const browser = await chromium.launch({executablePath: process.env.CHROME_PATH || 'C:/Program Files/Google/Chrome/Application/chrome.exe', headless:true});
+  try {
+    const context = await browser.newContext();
+    const page = await context.newPage();
+    const errors = [];
+    page.on('pageerror', error => errors.push(error.message));
+    await page.goto(origin + '/login');
+    await page.locator('#email').fill(process.env.QA_ADMIN_EMAIL || value('SUPER_ADMIN_EMAIL') || 'superadmin@gmail.com');
+    await page.locator('#password').fill(process.env.QA_ADMIN_PASSWORD || value('SUPER_ADMIN_PASSWORD'));
+    await page.locator('button[type=submit]').click();
+    await page.waitForURL('**/dashboard');
+    await page.goto(origin + '/programs');
+    await page.goBack();
+    await page.waitForURL('**/dashboard');
+    await page.locator('.fh-dashboard').waitFor({state:'visible'});
+    await page.locator('.bp-exit-link').click();
+    await page.waitForURL('**/login');
+    await page.goBack();
+    await page.waitForURL('**/login', {timeout:10000});
+    assert.equal(await page.locator('.fh-dashboard:visible').count(), 0);
+    await page.goForward();
+    await page.waitForURL('**/login', {timeout:10000});
+    const blocked = await page.goto(origin + '/dashboard');
+    assert.equal(new URL(page.url()).pathname, '/login');
+    assert.equal(blocked.status(), 200);
+    await page.reload();
+    assert.equal(new URL(page.url()).pathname, '/login');
+    assert.equal(await page.locator('.fh-dashboard:visible').count(), 0);
+    assert.deepEqual(errors, []);
+    console.log('Passed authenticated Back navigation, logout, Back/Forward after logout, direct dashboard access and refresh.');
+  } finally {await browser.close();}
+})().catch(error => {console.error(error.message);process.exit(1);});

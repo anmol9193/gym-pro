@@ -1,0 +1,1 @@
+<span class="bp-avatar {{ $avatarClass ?? '' }}" aria-hidden="true">@if(auth()->user()->avatar_path)<img src="{{ route('profile.photo', ['v' => auth()->user()->updated_at?->getTimestamp()]) }}" alt="" width="80" height="80">@else{{ mb_substr(auth()->user()->name, 0, 1) }}@endif</span>

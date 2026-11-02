@@ -6,6 +6,9 @@
     <meta name="robots" content="noindex, nofollow">
     <meta name="theme-color" content="#101211">
     <title>@yield('title') | BEAST MODE</title>
+    @auth
+    <script src="{{ asset('assets/auth-history.js') }}"></script>
+    @endauth
     <script>try{document.documentElement.dataset.theme=localStorage.getItem('beast-theme')||(matchMedia('(prefers-color-scheme: light)').matches?'light':'dark')}catch(_){}</script>
     <link rel="stylesheet" href="{{ asset('assets/fonts/fonts.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/styles.css') }}">

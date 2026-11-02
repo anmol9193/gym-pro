@@ -1,0 +1,1 @@
+<footer class="bp-dashboard-footer"><span>BEAST MODE · A little stronger, every day.</span><span>Designed &amp; Developed by <a href="https://anmolsaini.wuaze.com" target="_blank" rel="noopener noreferrer">Anmol Saini</a></span></footer>

@@ -2,9 +2,15 @@
   'use strict';
   const root = document.documentElement;
   const themeButtons = document.querySelectorAll('[data-theme-toggle]');
-  const updateThemeLabels = () => themeButtons.forEach(button => {
-    button.setAttribute('aria-label', `Switch to ${root.dataset.theme === 'dark' ? 'light' : 'dark'} theme`);
-  });
+  const updateThemeLabels = () => {
+    const dark = root.dataset.theme === 'dark';
+    document.querySelector('meta[name="theme-color"]').content = dark ? '#101211' : '#ffffff';
+    themeButtons.forEach(button => {
+      const label = `Switch to ${dark ? 'light' : 'dark'} theme`;
+      button.setAttribute('aria-label', label);
+      button.title = label;
+    });
+  };
   themeButtons.forEach(button => {
     button.hidden = false;
     button.addEventListener('click', () => {
@@ -14,11 +20,13 @@
     });
   });
   updateThemeLabels();
-
-  const previewForm = document.querySelector('[data-login-preview]');
-  previewForm?.addEventListener('submit', event => {
-    event.preventDefault();
-    location.assign(previewForm.action);
+  matchMedia('(prefers-color-scheme: light)').addEventListener('change', event => {
+    let saved;
+    try { saved = localStorage.getItem('beast-theme'); } catch (_) {}
+    if (!saved) {
+      root.dataset.theme = event.matches ? 'light' : 'dark';
+      updateThemeLabels();
+    }
   });
 
   const password = document.getElementById('password');
@@ -35,7 +43,7 @@
   const email = document.getElementById('email');
   const emailError = document.getElementById('email-error');
   if (email && emailError) {
-    email.addEventListener('invalid', () => { emailError.hidden = false; email.setAttribute('aria-invalid', 'true'); });
+    email.addEventListener('invalid', () => { emailError.textContent = 'Enter a valid email address.'; emailError.hidden = false; email.setAttribute('aria-invalid', 'true'); });
     email.addEventListener('input', () => { emailError.hidden = true; email.removeAttribute('aria-invalid'); });
   }
 
